@@ -1,0 +1,79 @@
+{
+    "endpoints": [
+        {
+            "name": "Create Interaction Response",
+            "method": "POST",
+            "route": "/interactions/{interaction.id}/{interaction.token}/callback",
+            "parameters": {
+                "interaction.id": "DOCS_INTERACTIONS_RECEIVING_AND_RESPONDING/interaction",
+                "interaction.token": "DOCS_INTERACTIONS_RECEIVING_AND_RESPONDING/interaction-object"
+            }
+        },
+        {
+            "name": "Get Original Interaction Response",
+            "method": "GET",
+            "route": "/webhooks/{application.id}/{interaction.token}/messages/@original",
+            "parameters": {
+                "application.id": "DOCS_RESOURCES_APPLICATION/application-object",
+                "interaction.token": "DOCS_INTERACTIONS_RECEIVING_AND_RESPONDING/interaction-object"
+            }
+        },
+        {
+            "name": "Edit Original Interaction Response",
+            "method": "PATCH",
+            "route": "/webhooks/{application.id}/{interaction.token}/messages/@original",
+            "parameters": {
+                "application.id": "DOCS_RESOURCES_APPLICATION/application-object",
+                "interaction.token": "DOCS_INTERACTIONS_RECEIVING_AND_RESPONDING/interaction-object"
+            }
+        },
+        {
+            "name": "Delete Original Interaction Response",
+            "method": "DELETE",
+            "route": "/webhooks/{application.id}/{interaction.token}/messages/@original",
+            "parameters": {
+                "application.id": "DOCS_RESOURCES_APPLICATION/application-object",
+                "interaction.token": "DOCS_INTERACTIONS_RECEIVING_AND_RESPONDING/interaction-object"
+            }
+        },
+        {
+            "name": "Create Followup Message",
+            "method": "POST",
+            "route": "/webhooks/{application.id}/{interaction.token}",
+            "parameters": {
+                "application.id": "DOCS_RESOURCES_APPLICATION/application-object",
+                "interaction.token": "DOCS_INTERACTIONS_RECEIVING_AND_RESPONDING/interaction-object"
+            }
+        },
+        {
+            "name": "Get Followup Message",
+            "method": "GET",
+            "route": "/webhooks/{application.id}/{interaction.token}/messages/{message.id}",
+            "parameters": {
+                "application.id": "DOCS_RESOURCES_APPLICATION/application-object",
+                "interaction.token": "DOCS_INTERACTIONS_RECEIVING_AND_RESPONDING/interaction-object",
+                "message.id": "DOCS_RESOURCES_CHANNEL/message-object"
+            }
+        },
+        {
+            "name": "Edit Followup Message",
+            "method": "PATCH",
+            "route": "/webhooks/{application.id}/{interaction.token}/messages/{message.id}",
+            "parameters": {
+                "application.id": "DOCS_RESOURCES_APPLICATION/application-object",
+                "interaction.token": "DOCS_INTERACTIONS_RECEIVING_AND_RESPONDING/interaction-object",
+                "message.id": "DOCS_RESOURCES_CHANNEL/message-object"
+            }
+        },
+        {
+            "name": "Delete Followup Message",
+            "method": "DELETE",
+            "route": "/webhooks/{application.id}/{interaction.token}/messages/{message.id}",
+            "parameters": {
+                "application.id": "DOCS_RESOURCES_APPLICATION/application-object",
+                "interaction.token": "DOCS_INTERACTIONS_RECEIVING_AND_RESPONDING/interaction-object",
+                "message.id": "DOCS_RESOURCES_CHANNEL/message-object"
+            }
+        }
+    ]
+}

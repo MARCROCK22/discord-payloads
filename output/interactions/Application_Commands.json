@@ -1,0 +1,150 @@
+{
+    "endpoints": [
+        {
+            "name": "Get Global Application Commands",
+            "method": "GET",
+            "route": "/applications/{application.id}/commands",
+            "parameters": {
+                "application.id": "DOCS_RESOURCES_APPLICATION/application-object"
+            }
+        },
+        {
+            "name": "Create Global Application Command",
+            "method": "POST",
+            "route": "/applications/{application.id}/commands",
+            "parameters": {
+                "application.id": "DOCS_RESOURCES_APPLICATION/application-object"
+            }
+        },
+        {
+            "name": "Get Global Application Command",
+            "method": "GET",
+            "route": "/applications/{application.id}/commands/{command.id}",
+            "parameters": {
+                "application.id": "DOCS_RESOURCES_APPLICATION/application-object",
+                "command.id": "DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object"
+            }
+        },
+        {
+            "name": "Edit Global Application Command",
+            "method": "PATCH",
+            "route": "/applications/{application.id}/commands/{command.id}",
+            "parameters": {
+                "application.id": "DOCS_RESOURCES_APPLICATION/application-object",
+                "command.id": "DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object"
+            }
+        },
+        {
+            "name": "Delete Global Application Command",
+            "method": "DELETE",
+            "route": "/applications/{application.id}/commands/{command.id}",
+            "parameters": {
+                "application.id": "DOCS_RESOURCES_APPLICATION/application-object",
+                "command.id": "DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object"
+            }
+        },
+        {
+            "name": "Bulk Overwrite Global Application Commands",
+            "method": "PUT",
+            "route": "/applications/{application.id}/commands",
+            "parameters": {
+                "application.id": "DOCS_RESOURCES_APPLICATION/application-object"
+            }
+        },
+        {
+            "name": "Get Guild Application Commands",
+            "method": "GET",
+            "route": "/applications/{application.id}/guilds/{guild.id}/commands",
+            "parameters": {
+                "application.id": "DOCS_RESOURCES_APPLICATION/application-object",
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Create Guild Application Command",
+            "method": "POST",
+            "route": "/applications/{application.id}/guilds/{guild.id}/commands",
+            "parameters": {
+                "application.id": "DOCS_RESOURCES_APPLICATION/application-object",
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Get Guild Application Command",
+            "method": "GET",
+            "route": "/applications/{application.id}/guilds/{guild.id}/commands/{command.id}",
+            "parameters": {
+                "application.id": "DOCS_RESOURCES_APPLICATION/application-object",
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
+                "command.id": "DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object"
+            }
+        },
+        {
+            "name": "Edit Guild Application Command",
+            "method": "PATCH",
+            "route": "/applications/{application.id}/guilds/{guild.id}/commands/{command.id}",
+            "parameters": {
+                "application.id": "DOCS_RESOURCES_APPLICATION/application-object",
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
+                "command.id": "DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object"
+            }
+        },
+        {
+            "name": "Delete Guild Application Command",
+            "method": "DELETE",
+            "route": "/applications/{application.id}/guilds/{guild.id}/commands/{command.id}",
+            "parameters": {
+                "application.id": "DOCS_RESOURCES_APPLICATION/application-object",
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
+                "command.id": "DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object"
+            }
+        },
+        {
+            "name": "Bulk Overwrite Guild Application Commands",
+            "method": "PUT",
+            "route": "/applications/{application.id}/guilds/{guild.id}/commands",
+            "parameters": {
+                "application.id": "DOCS_RESOURCES_APPLICATION/application-object",
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Get Guild Application Command Permissions",
+            "method": "GET",
+            "route": "/applications/{application.id}/guilds/{guild.id}/commands/permissions",
+            "parameters": {
+                "application.id": "DOCS_RESOURCES_APPLICATION/application-object",
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Get Application Command Permissions",
+            "method": "GET",
+            "route": "/applications/{application.id}/guilds/{guild.id}/commands/{command.id}/permissions",
+            "parameters": {
+                "application.id": "DOCS_RESOURCES_APPLICATION/application-object",
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
+                "command.id": "DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object"
+            }
+        },
+        {
+            "name": "Edit Application Command Permissions",
+            "method": "PUT",
+            "route": "/applications/{application.id}/guilds/{guild.id}/commands/{command.id}/permissions",
+            "parameters": {
+                "application.id": "DOCS_RESOURCES_APPLICATION/application-object",
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
+                "command.id": "DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object"
+            }
+        },
+        {
+            "name": "Batch Edit Application Command Permissions",
+            "method": "PUT",
+            "route": "/applications/{application.id}/guilds/{guild.id}/commands/permissions",
+            "parameters": {
+                "application.id": "DOCS_RESOURCES_APPLICATION/application-object",
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        }
+    ]
+}

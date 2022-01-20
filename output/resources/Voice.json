@@ -1,0 +1,10 @@
+{
+    "endpoints": [
+        {
+            "name": "List Voice Regions",
+            "method": "GET",
+            "route": "/voice/regions",
+            "parameters": {}
+        }
+    ]
+}

@@ -1,0 +1,136 @@
+{
+    "endpoints": [
+        {
+            "name": "Create Webhook",
+            "method": "POST",
+            "route": "/channels/{channel.id}/webhooks",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
+            }
+        },
+        {
+            "name": "Get Channel Webhooks",
+            "method": "GET",
+            "route": "/channels/{channel.id}/webhooks",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
+            }
+        },
+        {
+            "name": "Get Guild Webhooks",
+            "method": "GET",
+            "route": "/guilds/{guild.id}/webhooks",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Get Webhook",
+            "method": "GET",
+            "route": "/webhooks/{webhook.id}",
+            "parameters": {
+                "webhook.id": "DOCS_RESOURCES_WEBHOOK/webhook-object"
+            }
+        },
+        {
+            "name": "Get Webhook with Token",
+            "method": "GET",
+            "route": "/webhooks/{webhook.id}/{webhook.token}",
+            "parameters": {
+                "webhook.id": "DOCS_RESOURCES_WEBHOOK/webhook-object",
+                "webhook.token": "DOCS_RESOURCES_WEBHOOK/webhook-object"
+            }
+        },
+        {
+            "name": "Modify Webhook",
+            "method": "PATCH",
+            "route": "/webhooks/{webhook.id}",
+            "parameters": {
+                "webhook.id": "DOCS_RESOURCES_WEBHOOK/webhook-object"
+            }
+        },
+        {
+            "name": "Modify Webhook with Token",
+            "method": "PATCH",
+            "route": "/webhooks/{webhook.id}/{webhook.token}",
+            "parameters": {
+                "webhook.id": "DOCS_RESOURCES_WEBHOOK/webhook-object",
+                "webhook.token": "DOCS_RESOURCES_WEBHOOK/webhook-object"
+            }
+        },
+        {
+            "name": "Delete Webhook",
+            "method": "DELETE",
+            "route": "/webhooks/{webhook.id}",
+            "parameters": {
+                "webhook.id": "DOCS_RESOURCES_WEBHOOK/webhook-object"
+            }
+        },
+        {
+            "name": "Delete Webhook with Token",
+            "method": "DELETE",
+            "route": "/webhooks/{webhook.id}/{webhook.token}",
+            "parameters": {
+                "webhook.id": "DOCS_RESOURCES_WEBHOOK/webhook-object",
+                "webhook.token": "DOCS_RESOURCES_WEBHOOK/webhook-object"
+            }
+        },
+        {
+            "name": "Execute Webhook",
+            "method": "POST",
+            "route": "/webhooks/{webhook.id}/{webhook.token}",
+            "parameters": {
+                "webhook.id": "DOCS_RESOURCES_WEBHOOK/webhook-object",
+                "webhook.token": "DOCS_RESOURCES_WEBHOOK/webhook-object"
+            }
+        },
+        {
+            "name": "Execute Slack-Compatible Webhook",
+            "method": "POST",
+            "route": "/webhooks/{webhook.id}/{webhook.token}/slack",
+            "parameters": {
+                "webhook.id": "DOCS_RESOURCES_WEBHOOK/webhook-object",
+                "webhook.token": "DOCS_RESOURCES_WEBHOOK/webhook-object"
+            }
+        },
+        {
+            "name": "Execute GitHub-Compatible Webhook",
+            "method": "POST",
+            "route": "/webhooks/{webhook.id}/{webhook.token}/github",
+            "parameters": {
+                "webhook.id": "DOCS_RESOURCES_WEBHOOK/webhook-object",
+                "webhook.token": "DOCS_RESOURCES_WEBHOOK/webhook-object"
+            }
+        },
+        {
+            "name": "Get Webhook Message",
+            "method": "GET",
+            "route": "/webhooks/{webhook.id}/{webhook.token}/messages/{message.id}",
+            "parameters": {
+                "webhook.id": "DOCS_RESOURCES_WEBHOOK/webhook-object",
+                "webhook.token": "DOCS_RESOURCES_WEBHOOK/webhook-object",
+                "message.id": "DOCS_RESOURCES_CHANNEL/message-object"
+            }
+        },
+        {
+            "name": "Edit Webhook Message",
+            "method": "PATCH",
+            "route": "/webhooks/{webhook.id}/{webhook.token}/messages/{message.id}",
+            "parameters": {
+                "webhook.id": "DOCS_RESOURCES_WEBHOOK/webhook-object",
+                "webhook.token": "DOCS_RESOURCES_WEBHOOK/webhook-object",
+                "message.id": "DOCS_RESOURCES_CHANNEL/message-object"
+            }
+        },
+        {
+            "name": "Delete Webhook Message",
+            "method": "DELETE",
+            "route": "/webhooks/{webhook.id}/{webhook.token}/messages/{message.id}",
+            "parameters": {
+                "webhook.id": "DOCS_RESOURCES_WEBHOOK/webhook-object",
+                "webhook.token": "DOCS_RESOURCES_WEBHOOK/webhook-object",
+                "message.id": "DOCS_RESOURCES_CHANNEL/message-object"
+            }
+        }
+    ]
+}

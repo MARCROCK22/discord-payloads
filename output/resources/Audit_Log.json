@@ -1,0 +1,12 @@
+{
+    "endpoints": [
+        {
+            "name": "Get Guild Audit Log",
+            "method": "GET",
+            "route": "/guilds/{guild.id}/audit-logs",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        }
+    ]
+}

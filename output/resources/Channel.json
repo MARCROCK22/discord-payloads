@@ -1,0 +1,342 @@
+{
+    "endpoints": [
+        {
+            "name": "Get Channel",
+            "method": "GET",
+            "route": "/channels/{channel.id}",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
+            }
+        },
+        {
+            "name": "Modify Channel",
+            "method": "PATCH",
+            "route": "/channels/{channel.id}",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
+            }
+        },
+        {
+            "name": "Delete/Close Channel",
+            "method": "DELETE",
+            "route": "/channels/{channel.id}",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
+            }
+        },
+        {
+            "name": "Get Channel Messages",
+            "method": "GET",
+            "route": "/channels/{channel.id}/messages",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
+            }
+        },
+        {
+            "name": "Get Channel Message",
+            "method": "GET",
+            "route": "/channels/{channel.id}/messages/{message.id}",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
+                "message.id": "DOCS_RESOURCES_CHANNEL/message-object"
+            }
+        },
+        {
+            "name": "Create Message",
+            "method": "POST",
+            "route": "/channels/{channel.id}/messages",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
+            }
+        },
+        {
+            "name": "Crosspost Message",
+            "method": "POST",
+            "route": "/channels/{channel.id}/messages/{message.id}/crosspost",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
+                "message.id": "DOCS_RESOURCES_CHANNEL/message-object"
+            }
+        },
+        {
+            "name": "Create Reaction",
+            "method": "PUT",
+            "route": "/channels/{channel.id}/messages/{message.id}/reactions/{emoji}/@me",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
+                "message.id": "DOCS_RESOURCES_CHANNEL/message-object",
+                "emoji": "DOCS_RESOURCES_EMOJI/emoji-object"
+            }
+        },
+        {
+            "name": "Delete Own Reaction",
+            "method": "DELETE",
+            "route": "/channels/{channel.id}/messages/{message.id}/reactions/{emoji}/@me",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
+                "message.id": "DOCS_RESOURCES_CHANNEL/message-object",
+                "emoji": "DOCS_RESOURCES_EMOJI/emoji-object"
+            }
+        },
+        {
+            "name": "Delete User Reaction",
+            "method": "DELETE",
+            "route": "/channels/{channel.id}/messages/{message.id}/reactions/{emoji}/{user.id}",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
+                "message.id": "DOCS_RESOURCES_CHANNEL/message-object",
+                "emoji": "DOCS_RESOURCES_EMOJI/emoji-object",
+                "user.id": "DOCS_RESOURCES_USER/user-object"
+            }
+        },
+        {
+            "name": "Get Reactions",
+            "method": "GET",
+            "route": "/channels/{channel.id}/messages/{message.id}/reactions/{emoji}",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
+                "message.id": "DOCS_RESOURCES_CHANNEL/message-object",
+                "emoji": "DOCS_RESOURCES_EMOJI/emoji-object"
+            }
+        },
+        {
+            "name": "Delete All Reactions",
+            "method": "DELETE",
+            "route": "/channels/{channel.id}/messages/{message.id}/reactions",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
+                "message.id": "DOCS_RESOURCES_CHANNEL/message-object"
+            }
+        },
+        {
+            "name": "Delete All Reactions for Emoji",
+            "method": "DELETE",
+            "route": "/channels/{channel.id}/messages/{message.id}/reactions/{emoji}",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
+                "message.id": "DOCS_RESOURCES_CHANNEL/message-object",
+                "emoji": "DOCS_RESOURCES_EMOJI/emoji-object"
+            }
+        },
+        {
+            "name": "Edit Message",
+            "method": "PATCH",
+            "route": "/channels/{channel.id}/messages/{message.id}",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
+                "message.id": "DOCS_RESOURCES_CHANNEL/message-object"
+            }
+        },
+        {
+            "name": "Delete Message",
+            "method": "DELETE",
+            "route": "/channels/{channel.id}/messages/{message.id}",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
+                "message.id": "DOCS_RESOURCES_CHANNEL/message-object"
+            }
+        },
+        {
+            "name": "Bulk Delete Messages",
+            "method": "POST",
+            "route": "/channels/{channel.id}/messages/bulk-delete",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
+            }
+        },
+        {
+            "name": "Edit Channel Permissions",
+            "method": "PUT",
+            "route": "/channels/{channel.id}/permissions/{overwrite.id}",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
+                "overwrite.id": "DOCS_RESOURCES_CHANNEL/overwrite-object"
+            }
+        },
+        {
+            "name": "Get Channel Invites",
+            "method": "GET",
+            "route": "/channels/{channel.id}/invites",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
+            }
+        },
+        {
+            "name": "Create Channel Invite",
+            "method": "POST",
+            "route": "/channels/{channel.id}/invites",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
+            }
+        },
+        {
+            "name": "Delete Channel Permission",
+            "method": "DELETE",
+            "route": "/channels/{channel.id}/permissions/{overwrite.id}",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
+                "overwrite.id": "DOCS_RESOURCES_CHANNEL/overwrite-object"
+            }
+        },
+        {
+            "name": "Follow News Channel",
+            "method": "POST",
+            "route": "/channels/{channel.id}/followers",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
+            }
+        },
+        {
+            "name": "Trigger Typing Indicator",
+            "method": "POST",
+            "route": "/channels/{channel.id}/typing",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
+            }
+        },
+        {
+            "name": "Get Pinned Messages",
+            "method": "GET",
+            "route": "/channels/{channel.id}/pins",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
+            }
+        },
+        {
+            "name": "Pin Message",
+            "method": "PUT",
+            "route": "/channels/{channel.id}/pins/{message.id}",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
+                "message.id": "DOCS_RESOURCES_CHANNEL/message-object"
+            }
+        },
+        {
+            "name": "Unpin Message",
+            "method": "DELETE",
+            "route": "/channels/{channel.id}/pins/{message.id}",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
+                "message.id": "DOCS_RESOURCES_CHANNEL/message-object"
+            }
+        },
+        {
+            "name": "Group DM Add Recipient",
+            "method": "PUT",
+            "route": "/channels/{channel.id}/recipients/{user.id}",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
+                "user.id": "DOCS_RESOURCES_USER/user-object"
+            }
+        },
+        {
+            "name": "Group DM Remove Recipient",
+            "method": "DELETE",
+            "route": "/channels/{channel.id}/recipients/{user.id}",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
+                "user.id": "DOCS_RESOURCES_USER/user-object"
+            }
+        },
+        {
+            "name": "Start Thread with Message",
+            "method": "POST",
+            "route": "/channels/{channel.id}/messages/{message.id}/threads",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
+                "message.id": "DOCS_RESOURCES_CHANNEL/message-object"
+            }
+        },
+        {
+            "name": "Start Thread without Message",
+            "method": "POST",
+            "route": "/channels/{channel.id}/threads",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
+            }
+        },
+        {
+            "name": "Join Thread",
+            "method": "PUT",
+            "route": "/channels/{channel.id}/thread-members/@me",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
+            }
+        },
+        {
+            "name": "Add Thread Member",
+            "method": "PUT",
+            "route": "/channels/{channel.id}/thread-members/{user.id}",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
+                "user.id": "DOCS_RESOURCES_USER/user-object"
+            }
+        },
+        {
+            "name": "Leave Thread",
+            "method": "DELETE",
+            "route": "/channels/{channel.id}/thread-members/@me",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
+            }
+        },
+        {
+            "name": "Remove Thread Member",
+            "method": "DELETE",
+            "route": "/channels/{channel.id}/thread-members/{user.id}",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
+                "user.id": "DOCS_RESOURCES_USER/user-object"
+            }
+        },
+        {
+            "name": "Get Thread Member",
+            "method": "GET",
+            "route": "/channels/{channel.id}/thread-members/{user.id}",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
+                "user.id": "DOCS_RESOURCES_USER/user-object"
+            }
+        },
+        {
+            "name": "List Thread Members",
+            "method": "GET",
+            "route": "/channels/{channel.id}/thread-members",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
+            }
+        },
+        {
+            "name": "List Active Threads",
+            "method": "GET",
+            "route": "/channels/{channel.id}/threads/active",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
+            }
+        },
+        {
+            "name": "List Public Archived Threads",
+            "method": "GET",
+            "route": "/channels/{channel.id}/threads/archived/public",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
+            }
+        },
+        {
+            "name": "List Private Archived Threads",
+            "method": "GET",
+            "route": "/channels/{channel.id}/threads/archived/private",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
+            }
+        },
+        {
+            "name": "List Joined Private Archived Threads",
+            "method": "GET",
+            "route": "/channels/{channel.id}/users/@me/threads/archived/private",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
+            }
+        }
+    ]
+}

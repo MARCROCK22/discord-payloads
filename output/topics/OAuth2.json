@@ -1,0 +1,16 @@
+{
+    "endpoints": [
+        {
+            "name": "Get Current Bot Application Information",
+            "method": "GET",
+            "route": "/oauth2/applications/@me",
+            "parameters": {}
+        },
+        {
+            "name": "Get Current Authorization Information",
+            "method": "GET",
+            "route": "/oauth2/@me",
+            "parameters": {}
+        }
+    ]
+}

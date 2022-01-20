@@ -1,0 +1,361 @@
+{
+    "endpoints": [
+        {
+            "name": "Create Guild",
+            "method": "POST",
+            "route": "/guilds",
+            "parameters": {}
+        },
+        {
+            "name": "Get Guild",
+            "method": "GET",
+            "route": "/guilds/{guild.id}",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Get Guild Preview",
+            "method": "GET",
+            "route": "/guilds/{guild.id}/preview",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Modify Guild",
+            "method": "PATCH",
+            "route": "/guilds/{guild.id}",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Delete Guild",
+            "method": "DELETE",
+            "route": "/guilds/{guild.id}",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Get Guild Channels",
+            "method": "GET",
+            "route": "/guilds/{guild.id}/channels",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Create Guild Channel",
+            "method": "POST",
+            "route": "/guilds/{guild.id}/channels",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Modify Guild Channel Positions",
+            "method": "PATCH",
+            "route": "/guilds/{guild.id}/channels",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "List Active Threads",
+            "method": "GET",
+            "route": "/guilds/{guild.id}/threads/active",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Get Guild Member",
+            "method": "GET",
+            "route": "/guilds/{guild.id}/members/{user.id}",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
+                "user.id": "DOCS_RESOURCES_USER/user-object"
+            }
+        },
+        {
+            "name": "List Guild Members",
+            "method": "GET",
+            "route": "/guilds/{guild.id}/members",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Search Guild Members",
+            "method": "GET",
+            "route": "/guilds/{guild.id}/members/search",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Add Guild Member",
+            "method": "PUT",
+            "route": "/guilds/{guild.id}/members/{user.id}",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
+                "user.id": "DOCS_RESOURCES_USER/user-object"
+            }
+        },
+        {
+            "name": "Modify Guild Member",
+            "method": "PATCH",
+            "route": "/guilds/{guild.id}/members/{user.id}",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
+                "user.id": "DOCS_RESOURCES_USER/user-object"
+            }
+        },
+        {
+            "name": "Modify Current Member",
+            "method": "PATCH",
+            "route": "/guilds/{guild.id}/members/@me",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Modify Current User Nick",
+            "method": "PATCH",
+            "route": "/guilds/{guild.id}/members/@me/nick",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Add Guild Member Role",
+            "method": "PUT",
+            "route": "/guilds/{guild.id}/members/{user.id}/roles/{role.id}",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
+                "user.id": "DOCS_RESOURCES_USER/user-object",
+                "role.id": "DOCS_TOPICS_PERMISSIONS/role-object"
+            }
+        },
+        {
+            "name": "Remove Guild Member Role",
+            "method": "DELETE",
+            "route": "/guilds/{guild.id}/members/{user.id}/roles/{role.id}",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
+                "user.id": "DOCS_RESOURCES_USER/user-object",
+                "role.id": "DOCS_TOPICS_PERMISSIONS/role-object"
+            }
+        },
+        {
+            "name": "Remove Guild Member",
+            "method": "DELETE",
+            "route": "/guilds/{guild.id}/members/{user.id}",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
+                "user.id": "DOCS_RESOURCES_USER/user-object"
+            }
+        },
+        {
+            "name": "Get Guild Bans",
+            "method": "GET",
+            "route": "/guilds/{guild.id}/bans",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Get Guild Ban",
+            "method": "GET",
+            "route": "/guilds/{guild.id}/bans/{user.id}",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
+                "user.id": "DOCS_RESOURCES_USER/user-object"
+            }
+        },
+        {
+            "name": "Create Guild Ban",
+            "method": "PUT",
+            "route": "/guilds/{guild.id}/bans/{user.id}",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
+                "user.id": "DOCS_RESOURCES_USER/user-object"
+            }
+        },
+        {
+            "name": "Remove Guild Ban",
+            "method": "DELETE",
+            "route": "/guilds/{guild.id}/bans/{user.id}",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
+                "user.id": "DOCS_RESOURCES_USER/user-object"
+            }
+        },
+        {
+            "name": "Get Guild Roles",
+            "method": "GET",
+            "route": "/guilds/{guild.id}/roles",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Create Guild Role",
+            "method": "POST",
+            "route": "/guilds/{guild.id}/roles",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Modify Guild Role Positions",
+            "method": "PATCH",
+            "route": "/guilds/{guild.id}/roles",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Modify Guild Role",
+            "method": "PATCH",
+            "route": "/guilds/{guild.id}/roles/{role.id}",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
+                "role.id": "DOCS_TOPICS_PERMISSIONS/role-object"
+            }
+        },
+        {
+            "name": "Delete Guild Role",
+            "method": "DELETE",
+            "route": "/guilds/{guild.id}/roles/{role.id}",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
+                "role.id": "DOCS_TOPICS_PERMISSIONS/role-object"
+            }
+        },
+        {
+            "name": "Get Guild Prune Count",
+            "method": "GET",
+            "route": "/guilds/{guild.id}/prune",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Begin Guild Prune",
+            "method": "POST",
+            "route": "/guilds/{guild.id}/prune",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Get Guild Voice Regions",
+            "method": "GET",
+            "route": "/guilds/{guild.id}/regions",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Get Guild Invites",
+            "method": "GET",
+            "route": "/guilds/{guild.id}/invites",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Get Guild Integrations",
+            "method": "GET",
+            "route": "/guilds/{guild.id}/integrations",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Delete Guild Integration",
+            "method": "DELETE",
+            "route": "/guilds/{guild.id}/integrations/{integration.id}",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
+                "integration.id": "DOCS_RESOURCES_GUILD/integration-object"
+            }
+        },
+        {
+            "name": "Get Guild Widget Settings",
+            "method": "GET",
+            "route": "/guilds/{guild.id}/widget",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Modify Guild Widget",
+            "method": "PATCH",
+            "route": "/guilds/{guild.id}/widget",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Get Guild Widget",
+            "method": "GET",
+            "route": "/guilds/{guild.id}/widget.json",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Get Guild Vanity URL",
+            "method": "GET",
+            "route": "/guilds/{guild.id}/vanity-url",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Get Guild Widget Image",
+            "method": "GET",
+            "route": "/guilds/{guild.id}/widget.png",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Get Guild Welcome Screen",
+            "method": "GET",
+            "route": "/guilds/{guild.id}/welcome-screen",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Modify Guild Welcome Screen",
+            "method": "PATCH",
+            "route": "/guilds/{guild.id}/welcome-screen",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Modify Current User Voice State",
+            "method": "PATCH",
+            "route": "/guilds/{guild.id}/voice-states/@me",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Modify User Voice State",
+            "method": "PATCH",
+            "route": "/guilds/{guild.id}/voice-states/{user.id}",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
+                "user.id": "DOCS_RESOURCES_USER/user-object"
+            }
+        }
+    ]
+}

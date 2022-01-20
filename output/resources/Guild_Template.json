@@ -1,0 +1,63 @@
+{
+    "endpoints": [
+        {
+            "name": "Get Guild Template",
+            "method": "GET",
+            "route": "/guilds/templates/{template.code}",
+            "parameters": {
+                "template.code": "DOCS_RESOURCES_GUILD_TEMPLATE/guild-template-object"
+            }
+        },
+        {
+            "name": "Create Guild from Guild Template",
+            "method": "POST",
+            "route": "/guilds/templates/{template.code}",
+            "parameters": {
+                "template.code": "DOCS_RESOURCES_GUILD_TEMPLATE/guild-template-object"
+            }
+        },
+        {
+            "name": "Get Guild Templates",
+            "method": "GET",
+            "route": "/guilds/{guild.id}/templates",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Create Guild Template",
+            "method": "POST",
+            "route": "/guilds/{guild.id}/templates",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Sync Guild Template",
+            "method": "PUT",
+            "route": "/guilds/{guild.id}/templates/{template.code}",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
+                "template.code": "DOCS_RESOURCES_GUILD_TEMPLATE/guild-template-object"
+            }
+        },
+        {
+            "name": "Modify Guild Template",
+            "method": "PATCH",
+            "route": "/guilds/{guild.id}/templates/{template.code}",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
+                "template.code": "DOCS_RESOURCES_GUILD_TEMPLATE/guild-template-object"
+            }
+        },
+        {
+            "name": "Delete Guild Template",
+            "method": "DELETE",
+            "route": "/guilds/{guild.id}/templates/{template.code}",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
+                "template.code": "DOCS_RESOURCES_GUILD_TEMPLATE/guild-template-object"
+            }
+        }
+    ]
+}

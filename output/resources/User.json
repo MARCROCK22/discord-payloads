@@ -1,0 +1,64 @@
+{
+    "endpoints": [
+        {
+            "name": "Get Current User",
+            "method": "GET",
+            "route": "/users/@me",
+            "parameters": {}
+        },
+        {
+            "name": "Get User",
+            "method": "GET",
+            "route": "/users/{user.id}",
+            "parameters": {
+                "user.id": "DOCS_RESOURCES_USER/user-object"
+            }
+        },
+        {
+            "name": "Modify Current User",
+            "method": "PATCH",
+            "route": "/users/@me",
+            "parameters": {}
+        },
+        {
+            "name": "Get Current User Guilds",
+            "method": "GET",
+            "route": "/users/@me/guilds",
+            "parameters": {}
+        },
+        {
+            "name": "Get Current User Guild Member",
+            "method": "GET",
+            "route": "/users/@me/guilds/{guild.id}/member",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Leave Guild",
+            "method": "DELETE",
+            "route": "/users/@me/guilds/{guild.id}",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Create DM",
+            "method": "POST",
+            "route": "/users/@me/channels",
+            "parameters": {}
+        },
+        {
+            "name": "Create Group DM",
+            "method": "POST",
+            "route": "/users/@me/channels",
+            "parameters": {}
+        },
+        {
+            "name": "Get User Connections",
+            "method": "GET",
+            "route": "/users/@me/connections",
+            "parameters": {}
+        }
+    ]
+}

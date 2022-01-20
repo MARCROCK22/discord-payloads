@@ -1,0 +1,61 @@
+{
+    "endpoints": [
+        {
+            "name": "Get Sticker",
+            "method": "GET",
+            "route": "/stickers/{sticker.id}",
+            "parameters": {
+                "sticker.id": "DOCS_RESOURCES_STICKER/sticker-object"
+            }
+        },
+        {
+            "name": "List Nitro Sticker Packs",
+            "method": "GET",
+            "route": "/sticker-packs",
+            "parameters": {}
+        },
+        {
+            "name": "List Guild Stickers",
+            "method": "GET",
+            "route": "/guilds/{guild.id}/stickers",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Get Guild Sticker",
+            "method": "GET",
+            "route": "/guilds/{guild.id}/stickers/{sticker.id}",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
+                "sticker.id": "DOCS_RESOURCES_STICKER/sticker-object"
+            }
+        },
+        {
+            "name": "Create Guild Sticker",
+            "method": "POST",
+            "route": "/guilds/{guild.id}/stickers",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Modify Guild Sticker",
+            "method": "PATCH",
+            "route": "/guilds/{guild.id}/stickers/{sticker.id}",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
+                "sticker.id": "DOCS_RESOURCES_STICKER/sticker-object"
+            }
+        },
+        {
+            "name": "Delete Guild Sticker",
+            "method": "DELETE",
+            "route": "/guilds/{guild.id}/stickers/{sticker.id}",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
+                "sticker.id": "DOCS_RESOURCES_STICKER/sticker-object"
+            }
+        }
+    ]
+}

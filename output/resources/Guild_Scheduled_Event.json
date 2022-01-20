@@ -1,0 +1,56 @@
+{
+    "endpoints": [
+        {
+            "name": "List Scheduled Events for Guild",
+            "method": "GET",
+            "route": "/guilds/{guild.id}/scheduled-events",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Create Guild Scheduled Event",
+            "method": "POST",
+            "route": "/guilds/{guild.id}/scheduled-events",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Get Guild Scheduled Event",
+            "method": "GET",
+            "route": "/guilds/{guild.id}/scheduled-events/{guild_scheduled_event.id}",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
+                "guild_scheduled_event.id": "DOCS_RESOURCES_GUILD_SCHEDULED_EVENT/guild-scheduled-event-object"
+            }
+        },
+        {
+            "name": "Modify Guild Scheduled Event",
+            "method": "PATCH",
+            "route": "/guilds/{guild.id}/scheduled-events/{guild_scheduled_event.id}",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
+                "guild_scheduled_event.id": "DOCS_RESOURCES_GUILD_SCHEDULED_EVENT/guild-scheduled-event-object"
+            }
+        },
+        {
+            "name": "Delete Guild Scheduled Event",
+            "method": "DELETE",
+            "route": "/guilds/{guild.id}/scheduled-events/{guild_scheduled_event.id}",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
+                "guild_scheduled_event.id": "DOCS_RESOURCES_GUILD_SCHEDULED_EVENT/guild-scheduled-event-object"
+            }
+        },
+        {
+            "name": "Get Guild Scheduled Event Users",
+            "method": "GET",
+            "route": "/guilds/{guild.id}/scheduled-events/{guild_scheduled_event.id}/users",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
+                "guild_scheduled_event.id": "DOCS_RESOURCES_GUILD_SCHEDULED_EVENT/guild-scheduled-event-object"
+            }
+        }
+    ]
+}

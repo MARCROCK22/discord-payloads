@@ -1,0 +1,16 @@
+{
+    "endpoints": [
+        {
+            "name": "Get Gateway",
+            "method": "GET",
+            "route": "/gateway",
+            "parameters": {}
+        },
+        {
+            "name": "Get Gateway Bot",
+            "method": "GET",
+            "route": "/gateway/bot",
+            "parameters": {}
+        }
+    ]
+}

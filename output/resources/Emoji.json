@@ -1,0 +1,47 @@
+{
+    "endpoints": [
+        {
+            "name": "List Guild Emojis",
+            "method": "GET",
+            "route": "/guilds/{guild.id}/emojis",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Get Guild Emoji",
+            "method": "GET",
+            "route": "/guilds/{guild.id}/emojis/{emoji.id}",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
+                "emoji.id": "DOCS_RESOURCES_EMOJI/emoji-object"
+            }
+        },
+        {
+            "name": "Create Guild Emoji",
+            "method": "POST",
+            "route": "/guilds/{guild.id}/emojis",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
+            }
+        },
+        {
+            "name": "Modify Guild Emoji",
+            "method": "PATCH",
+            "route": "/guilds/{guild.id}/emojis/{emoji.id}",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
+                "emoji.id": "DOCS_RESOURCES_EMOJI/emoji-object"
+            }
+        },
+        {
+            "name": "Delete Guild Emoji",
+            "method": "DELETE",
+            "route": "/guilds/{guild.id}/emojis/{emoji.id}",
+            "parameters": {
+                "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
+                "emoji.id": "DOCS_RESOURCES_EMOJI/emoji-object"
+            }
+        }
+    ]
+}

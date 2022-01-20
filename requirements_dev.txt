@@ -1,0 +1,4 @@
+-r requirements.txt
+
+pre-commit~=2.17
+taskipy~=1.9

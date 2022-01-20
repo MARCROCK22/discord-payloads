@@ -1,0 +1,34 @@
+{
+    "endpoints": [
+        {
+            "name": "Create Stage Instance",
+            "method": "POST",
+            "route": "/stage-instances",
+            "parameters": {}
+        },
+        {
+            "name": "Get Stage Instance",
+            "method": "GET",
+            "route": "/stage-instances/{channel.id}",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
+            }
+        },
+        {
+            "name": "Modify Stage Instance",
+            "method": "PATCH",
+            "route": "/stage-instances/{channel.id}",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
+            }
+        },
+        {
+            "name": "Delete Stage Instance",
+            "method": "DELETE",
+            "route": "/stage-instances/{channel.id}",
+            "parameters": {
+                "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
+            }
+        }
+    ]
+}
