@@ -4,7 +4,8 @@
             "name": "Create Stage Instance",
             "method": "POST",
             "route": "/stage-instances",
-            "parameters": {}
+            "parameters": {},
+            "description": "Creates a new Stage instance associated to a Stage channel.\nRequires the user to be a moderator of the Stage channel."
         },
         {
             "name": "Get Stage Instance",
@@ -12,7 +13,8 @@
             "route": "/stage-instances/{channel.id}",
             "parameters": {
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
-            }
+            },
+            "description": "Gets the stage instance associated with the Stage channel, if it exists."
         },
         {
             "name": "Modify Stage Instance",
@@ -20,7 +22,8 @@
             "route": "/stage-instances/{channel.id}",
             "parameters": {
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
-            }
+            },
+            "description": "Updates fields of an existing Stage instance.\nRequires the user to be a moderator of the Stage channel."
         },
         {
             "name": "Delete Stage Instance",
@@ -28,7 +31,8 @@
             "route": "/stage-instances/{channel.id}",
             "parameters": {
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
-            }
+            },
+            "description": "Deletes the Stage instance.\nRequires the user to be a moderator of the Stage channel."
         }
     ]
 }

@@ -6,7 +6,8 @@
             "route": "/invites/{invite.code}",
             "parameters": {
                 "invite.code": "DOCS_RESOURCES_INVITE/invite-object"
-            }
+            },
+            "description": "Returns an [invite](#DOCS_RESOURCES_INVITE/invite-object) object for the given code."
         },
         {
             "name": "Delete Invite",
@@ -14,7 +15,8 @@
             "route": "/invites/{invite.code}",
             "parameters": {
                 "invite.code": "DOCS_RESOURCES_INVITE/invite-object"
-            }
+            },
+            "description": "Delete an invite. Requires the `MANAGE_CHANNELS` permission on the channel this invite belongs to, or `MANAGE_GUILD` to remove any invite across the guild. Returns an [invite](#DOCS_RESOURCES_INVITE/invite-object) object on success. Fires a [Invite Delete](#DOCS_TOPICS_GATEWAY/invite-delete) Gateway event."
         }
     ]
 }

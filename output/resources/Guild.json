@@ -4,7 +4,8 @@
             "name": "Create Guild",
             "method": "POST",
             "route": "/guilds",
-            "parameters": {}
+            "parameters": {},
+            "description": "Create a new guild. Returns a [guild](#DOCS_RESOURCES_GUILD/guild-object) object on success. Fires a [Guild Create](#DOCS_TOPICS_GATEWAY/guild-create) Gateway event."
         },
         {
             "name": "Get Guild",
@@ -12,7 +13,8 @@
             "route": "/guilds/{guild.id}",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Returns the [guild](#DOCS_RESOURCES_GUILD/guild-object) object for the given id. If `with_counts` is set to `true`, this endpoint will also return `approximate_member_count` and `approximate_presence_count` for the guild."
         },
         {
             "name": "Get Guild Preview",
@@ -20,7 +22,8 @@
             "route": "/guilds/{guild.id}/preview",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Returns the [guild preview](#DOCS_RESOURCES_GUILD/guild-preview-object) object for the given id. If the user is not in the guild, then the guild must be lurkable."
         },
         {
             "name": "Modify Guild",
@@ -28,7 +31,8 @@
             "route": "/guilds/{guild.id}",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Modify a guild's settings. Requires the `MANAGE_GUILD` permission. Returns the updated [guild](#DOCS_RESOURCES_GUILD/guild-object) object on success. Fires a [Guild Update](#DOCS_TOPICS_GATEWAY/guild-update) Gateway event."
         },
         {
             "name": "Delete Guild",
@@ -36,7 +40,8 @@
             "route": "/guilds/{guild.id}",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Delete a guild permanently. User must be owner. Returns `204 No Content` on success. Fires a [Guild Delete](#DOCS_TOPICS_GATEWAY/guild-delete) Gateway event."
         },
         {
             "name": "Get Guild Channels",
@@ -44,7 +49,8 @@
             "route": "/guilds/{guild.id}/channels",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Returns a list of guild [channel](#DOCS_RESOURCES_CHANNEL/channel-object) objects. Does not include threads."
         },
         {
             "name": "Create Guild Channel",
@@ -52,7 +58,8 @@
             "route": "/guilds/{guild.id}/channels",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Create a new [channel](#DOCS_RESOURCES_CHANNEL/channel-object) object for the guild. Requires the `MANAGE_CHANNELS` permission. If setting permission overwrites, only permissions your bot has in the guild can be allowed/denied. Setting `MANAGE_ROLES` permission in channels is only possible for guild administrators. Returns the new [channel](#DOCS_RESOURCES_CHANNEL/channel-object) object on success. Fires a [Channel Create](#DOCS_TOPICS_GATEWAY/channel-create) Gateway event."
         },
         {
             "name": "Modify Guild Channel Positions",
@@ -60,7 +67,8 @@
             "route": "/guilds/{guild.id}/channels",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Modify the positions of a set of [channel](#DOCS_RESOURCES_CHANNEL/channel-object) objects for the guild. Requires `MANAGE_CHANNELS` permission. Returns a 204 empty response on success. Fires multiple [Channel Update](#DOCS_TOPICS_GATEWAY/channel-update) Gateway events.\nThis endpoint takes a JSON array of parameters in the following format:"
         },
         {
             "name": "List Active Threads",
@@ -68,7 +76,8 @@
             "route": "/guilds/{guild.id}/threads/active",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Returns all active threads in the guild, including public and private threads. Threads are ordered by their `id`, in descending order."
         },
         {
             "name": "Get Guild Member",
@@ -77,7 +86,8 @@
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
                 "user.id": "DOCS_RESOURCES_USER/user-object"
-            }
+            },
+            "description": "Returns a [guild member](#DOCS_RESOURCES_GUILD/guild-member-object) object for the specified user."
         },
         {
             "name": "List Guild Members",
@@ -85,7 +95,8 @@
             "route": "/guilds/{guild.id}/members",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Returns a list of [guild member](#DOCS_RESOURCES_GUILD/guild-member-object) objects that are members of the guild."
         },
         {
             "name": "Search Guild Members",
@@ -93,7 +104,8 @@
             "route": "/guilds/{guild.id}/members/search",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Returns a list of [guild member](#DOCS_RESOURCES_GUILD/guild-member-object) objects whose username or nickname starts with a provided string."
         },
         {
             "name": "Add Guild Member",
@@ -102,7 +114,8 @@
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
                 "user.id": "DOCS_RESOURCES_USER/user-object"
-            }
+            },
+            "description": "Adds a user to the guild, provided you have a valid oauth2 access token for the user with the `guilds.join` scope. Returns a 201 Created with the [guild member](#DOCS_RESOURCES_GUILD/guild-member-object) as the body, or 204 No Content if the user is already a member of the guild. Fires a [Guild Member Add](#DOCS_TOPICS_GATEWAY/guild-member-add) Gateway event.\nFor guilds with [Membership Screening](#DOCS_RESOURCES_GUILD/membership-screening-object) enabled, this endpoint will default to adding new members as `pending` in the [guild member object](#DOCS_RESOURCES_GUILD/guild-member-object). Members that are `pending` will have to complete membership screening before they become full members that can talk."
         },
         {
             "name": "Modify Guild Member",
@@ -111,7 +124,8 @@
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
                 "user.id": "DOCS_RESOURCES_USER/user-object"
-            }
+            },
+            "description": "Modify attributes of a [guild member](#DOCS_RESOURCES_GUILD/guild-member-object). Returns a 200 OK with the [guild member](#DOCS_RESOURCES_GUILD/guild-member-object) as the body. Fires a [Guild Member Update](#DOCS_TOPICS_GATEWAY/guild-member-update) Gateway event. If the `channel_id` is set to null, this will force the target user to be disconnected from voice."
         },
         {
             "name": "Modify Current Member",
@@ -119,7 +133,8 @@
             "route": "/guilds/{guild.id}/members/@me",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Modifies the current member in a guild. Returns a 200 with the updated member object on success. Fires a [Guild Member Update](#DOCS_TOPICS_GATEWAY/guild-member-update) Gateway event."
         },
         {
             "name": "Modify Current User Nick",
@@ -127,7 +142,8 @@
             "route": "/guilds/{guild.id}/members/@me/nick",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Modifies the nickname of the current user in a guild. Returns a 200 with the nickname on success. Fires a [Guild Member Update](#DOCS_TOPICS_GATEWAY/guild-member-update) Gateway event."
         },
         {
             "name": "Add Guild Member Role",
@@ -137,7 +153,8 @@
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
                 "user.id": "DOCS_RESOURCES_USER/user-object",
                 "role.id": "DOCS_TOPICS_PERMISSIONS/role-object"
-            }
+            },
+            "description": "Adds a role to a [guild member](#DOCS_RESOURCES_GUILD/guild-member-object). Requires the `MANAGE_ROLES` permission. Returns a 204 empty response on success. Fires a [Guild Member Update](#DOCS_TOPICS_GATEWAY/guild-member-update) Gateway event."
         },
         {
             "name": "Remove Guild Member Role",
@@ -147,7 +164,8 @@
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
                 "user.id": "DOCS_RESOURCES_USER/user-object",
                 "role.id": "DOCS_TOPICS_PERMISSIONS/role-object"
-            }
+            },
+            "description": "Removes a role from a [guild member](#DOCS_RESOURCES_GUILD/guild-member-object). Requires the `MANAGE_ROLES` permission. Returns a 204 empty response on success. Fires a [Guild Member Update](#DOCS_TOPICS_GATEWAY/guild-member-update) Gateway event."
         },
         {
             "name": "Remove Guild Member",
@@ -156,7 +174,8 @@
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
                 "user.id": "DOCS_RESOURCES_USER/user-object"
-            }
+            },
+            "description": "Remove a member from a guild. Requires `KICK_MEMBERS` permission. Returns a 204 empty response on success. Fires a [Guild Member Remove](#DOCS_TOPICS_GATEWAY/guild-member-remove) Gateway event."
         },
         {
             "name": "Get Guild Bans",
@@ -164,7 +183,8 @@
             "route": "/guilds/{guild.id}/bans",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Returns a list of [ban](#DOCS_RESOURCES_GUILD/ban-object) objects for the users banned from this guild. Requires the `BAN_MEMBERS` permission."
         },
         {
             "name": "Get Guild Ban",
@@ -173,7 +193,8 @@
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
                 "user.id": "DOCS_RESOURCES_USER/user-object"
-            }
+            },
+            "description": "Returns a [ban](#DOCS_RESOURCES_GUILD/ban-object) object for the given user or a 404 not found if the ban cannot be found. Requires the `BAN_MEMBERS` permission."
         },
         {
             "name": "Create Guild Ban",
@@ -182,7 +203,8 @@
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
                 "user.id": "DOCS_RESOURCES_USER/user-object"
-            }
+            },
+            "description": "Create a guild ban, and optionally delete previous messages sent by the banned user. Requires the `BAN_MEMBERS` permission. Returns a 204 empty response on success. Fires a [Guild Ban Add](#DOCS_TOPICS_GATEWAY/guild-ban-add) Gateway event."
         },
         {
             "name": "Remove Guild Ban",
@@ -191,7 +213,8 @@
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
                 "user.id": "DOCS_RESOURCES_USER/user-object"
-            }
+            },
+            "description": "Remove the ban for a user. Requires the `BAN_MEMBERS` permissions. Returns a 204 empty response on success. Fires a [Guild Ban Remove](#DOCS_TOPICS_GATEWAY/guild-ban-remove) Gateway event."
         },
         {
             "name": "Get Guild Roles",
@@ -199,7 +222,8 @@
             "route": "/guilds/{guild.id}/roles",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Returns a list of [role](#DOCS_TOPICS_PERMISSIONS/role-object) objects for the guild."
         },
         {
             "name": "Create Guild Role",
@@ -207,7 +231,8 @@
             "route": "/guilds/{guild.id}/roles",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Create a new [role](#DOCS_TOPICS_PERMISSIONS/role-object) for the guild. Requires the `MANAGE_ROLES` permission. Returns the new [role](#DOCS_TOPICS_PERMISSIONS/role-object) object on success. Fires a [Guild Role Create](#DOCS_TOPICS_GATEWAY/guild-role-create) Gateway event. All JSON params are optional."
         },
         {
             "name": "Modify Guild Role Positions",
@@ -215,7 +240,8 @@
             "route": "/guilds/{guild.id}/roles",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Modify the positions of a set of [role](#DOCS_TOPICS_PERMISSIONS/role-object) objects for the guild. Requires the `MANAGE_ROLES` permission. Returns a list of all of the guild's [role](#DOCS_TOPICS_PERMISSIONS/role-object) objects on success. Fires multiple [Guild Role Update](#DOCS_TOPICS_GATEWAY/guild-role-update) Gateway events.\nThis endpoint takes a JSON array of parameters in the following format:"
         },
         {
             "name": "Modify Guild Role",
@@ -224,7 +250,8 @@
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
                 "role.id": "DOCS_TOPICS_PERMISSIONS/role-object"
-            }
+            },
+            "description": "Modify a guild role. Requires the `MANAGE_ROLES` permission. Returns the updated [role](#DOCS_TOPICS_PERMISSIONS/role-object) on success. Fires a [Guild Role Update](#DOCS_TOPICS_GATEWAY/guild-role-update) Gateway event."
         },
         {
             "name": "Delete Guild Role",
@@ -233,7 +260,8 @@
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
                 "role.id": "DOCS_TOPICS_PERMISSIONS/role-object"
-            }
+            },
+            "description": "Delete a guild role. Requires the `MANAGE_ROLES` permission. Returns a 204 empty response on success. Fires a [Guild Role Delete](#DOCS_TOPICS_GATEWAY/guild-role-delete) Gateway event."
         },
         {
             "name": "Get Guild Prune Count",
@@ -241,7 +269,8 @@
             "route": "/guilds/{guild.id}/prune",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Returns an object with one 'pruned' key indicating the number of members that would be removed in a prune operation. Requires the `KICK_MEMBERS` permission.\nBy default, prune will not remove users with roles. You can optionally include specific roles in your prune by providing the `include_roles` parameter. Any inactive user that has a subset of the provided role(s) will be counted in the prune and users with additional roles will not."
         },
         {
             "name": "Begin Guild Prune",
@@ -249,7 +278,8 @@
             "route": "/guilds/{guild.id}/prune",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Begin a prune operation. Requires the `KICK_MEMBERS` permission. Returns an object with one 'pruned' key indicating the number of members that were removed in the prune operation. For large guilds it's recommended to set the `compute_prune_count` option to `false`, forcing 'pruned' to `null`. Fires multiple [Guild Member Remove](#DOCS_TOPICS_GATEWAY/guild-member-remove) Gateway events.\nBy default, prune will not remove users with roles. You can optionally include specific roles in your prune by providing the `include_roles` parameter. Any inactive user that has a subset of the provided role(s) will be included in the prune and users with additional roles will not."
         },
         {
             "name": "Get Guild Voice Regions",
@@ -257,7 +287,8 @@
             "route": "/guilds/{guild.id}/regions",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Returns a list of [voice region](#DOCS_RESOURCES_VOICE/voice-region-object) objects for the guild. Unlike the similar `/voice` route, this returns VIP servers when the guild is VIP-enabled."
         },
         {
             "name": "Get Guild Invites",
@@ -265,7 +296,8 @@
             "route": "/guilds/{guild.id}/invites",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Returns a list of [invite](#DOCS_RESOURCES_INVITE/invite-object) objects (with [invite metadata](#DOCS_RESOURCES_INVITE/invite-metadata-object)) for the guild. Requires the `MANAGE_GUILD` permission."
         },
         {
             "name": "Get Guild Integrations",
@@ -273,7 +305,8 @@
             "route": "/guilds/{guild.id}/integrations",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Returns a list of [integration](#DOCS_RESOURCES_GUILD/integration-object) objects for the guild. Requires the `MANAGE_GUILD` permission."
         },
         {
             "name": "Delete Guild Integration",
@@ -282,7 +315,8 @@
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
                 "integration.id": "DOCS_RESOURCES_GUILD/integration-object"
-            }
+            },
+            "description": "Delete the attached [integration](#DOCS_RESOURCES_GUILD/integration-object) object for the guild. Deletes any associated webhooks and kicks the associated bot if there is one. Requires the `MANAGE_GUILD` permission. Returns a 204 empty response on success. Fires a [Guild Integrations Update](#DOCS_TOPICS_GATEWAY/guild-integrations-update) Gateway event."
         },
         {
             "name": "Get Guild Widget Settings",
@@ -290,7 +324,8 @@
             "route": "/guilds/{guild.id}/widget",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Returns a [guild widget settings](#DOCS_RESOURCES_GUILD/guild-widget-settings-object) object. Requires the `MANAGE_GUILD` permission."
         },
         {
             "name": "Modify Guild Widget",
@@ -298,7 +333,8 @@
             "route": "/guilds/{guild.id}/widget",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Modify a [guild widget settings](#DOCS_RESOURCES_GUILD/guild-widget-settings-object) object for the guild. All attributes may be passed in with JSON and modified. Requires the `MANAGE_GUILD` permission. Returns the updated [guild widget](#DOCS_RESOURCES_GUILD/guild-widget-settings-object) object."
         },
         {
             "name": "Get Guild Widget",
@@ -306,7 +342,8 @@
             "route": "/guilds/{guild.id}/widget.json",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Returns the [widget](#DOCS_RESOURCES_GUILD/get-guild-widget-object) for the guild."
         },
         {
             "name": "Get Guild Vanity URL",
@@ -314,7 +351,8 @@
             "route": "/guilds/{guild.id}/vanity-url",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Returns a partial [invite](#DOCS_RESOURCES_INVITE/invite-object) object for guilds with that feature enabled. Requires the `MANAGE_GUILD` permission. `code` will be null if a vanity url for the guild is not set."
         },
         {
             "name": "Get Guild Widget Image",
@@ -322,7 +360,8 @@
             "route": "/guilds/{guild.id}/widget.png",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Returns a PNG image widget for the guild. Requires no permissions or authentication."
         },
         {
             "name": "Get Guild Welcome Screen",
@@ -330,7 +369,8 @@
             "route": "/guilds/{guild.id}/welcome-screen",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Returns the [Welcome Screen](#DOCS_RESOURCES_GUILD/welcome-screen-object) object for the guild. Requires the `MANAGE_GUILD` permission."
         },
         {
             "name": "Modify Guild Welcome Screen",
@@ -338,7 +378,8 @@
             "route": "/guilds/{guild.id}/welcome-screen",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Modify the guild's [Welcome Screen](#DOCS_RESOURCES_GUILD/welcome-screen-object). Requires the `MANAGE_GUILD` permission. Returns the updated [Welcome Screen](#DOCS_RESOURCES_GUILD/welcome-screen-object) object."
         },
         {
             "name": "Modify Current User Voice State",
@@ -346,7 +387,8 @@
             "route": "/guilds/{guild.id}/voice-states/@me",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Updates the current user's voice state."
         },
         {
             "name": "Modify User Voice State",
@@ -355,7 +397,8 @@
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
                 "user.id": "DOCS_RESOURCES_USER/user-object"
-            }
+            },
+            "description": "Updates another user's voice state."
         }
     ]
 }

@@ -4,7 +4,8 @@
             "name": "Get Current User",
             "method": "GET",
             "route": "/users/@me",
-            "parameters": {}
+            "parameters": {},
+            "description": "Returns the [user](#DOCS_RESOURCES_USER/user-object) object of the requester's account. For OAuth2, this requires the `identify` scope, which will return the object _without_ an email, and optionally the `email` scope, which returns the object _with_ an email."
         },
         {
             "name": "Get User",
@@ -12,19 +13,22 @@
             "route": "/users/{user.id}",
             "parameters": {
                 "user.id": "DOCS_RESOURCES_USER/user-object"
-            }
+            },
+            "description": "Returns a [user](#DOCS_RESOURCES_USER/user-object) object for a given user ID."
         },
         {
             "name": "Modify Current User",
             "method": "PATCH",
             "route": "/users/@me",
-            "parameters": {}
+            "parameters": {},
+            "description": "Modify the requester's user account settings. Returns a [user](#DOCS_RESOURCES_USER/user-object) object on success."
         },
         {
             "name": "Get Current User Guilds",
             "method": "GET",
             "route": "/users/@me/guilds",
-            "parameters": {}
+            "parameters": {},
+            "description": "Returns a list of partial [guild](#DOCS_RESOURCES_GUILD/guild-object) objects the current user is a member of. Requires the `guilds` OAuth2 scope."
         },
         {
             "name": "Get Current User Guild Member",
@@ -32,7 +36,8 @@
             "route": "/users/@me/guilds/{guild.id}/member",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Returns a [guild member](#DOCS_RESOURCES_GUILD/guild-member-object) object for the current user. Requires the `guilds.members.read` OAuth2 scope."
         },
         {
             "name": "Leave Guild",
@@ -40,25 +45,29 @@
             "route": "/users/@me/guilds/{guild.id}",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Leave a guild. Returns a 204 empty response on success."
         },
         {
             "name": "Create DM",
             "method": "POST",
             "route": "/users/@me/channels",
-            "parameters": {}
+            "parameters": {},
+            "description": "Create a new DM channel with a user. Returns a [DM channel](#DOCS_RESOURCES_CHANNEL/channel-object) object."
         },
         {
             "name": "Create Group DM",
             "method": "POST",
             "route": "/users/@me/channels",
-            "parameters": {}
+            "parameters": {},
+            "description": "Create a new group DM channel with multiple users. Returns a [DM channel](#DOCS_RESOURCES_CHANNEL/channel-object) object. This endpoint was intended to be used with the now-deprecated GameBridge SDK. DMs created with this endpoint will not be shown in the Discord client"
         },
         {
             "name": "Get User Connections",
             "method": "GET",
             "route": "/users/@me/connections",
-            "parameters": {}
+            "parameters": {},
+            "description": "Returns a list of [connection](#DOCS_RESOURCES_USER/connection-object) objects. Requires the `connections` OAuth2 scope."
         }
     ]
 }

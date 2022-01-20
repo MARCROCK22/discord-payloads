@@ -6,7 +6,8 @@
             "route": "/guilds/{guild.id}/audit-logs",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Returns an [audit log](#DOCS_RESOURCES_AUDIT_LOG/audit-log-object) object for the guild. Requires the 'VIEW_AUDIT_LOG' permission."
         }
     ]
 }

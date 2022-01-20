@@ -6,7 +6,8 @@
             "route": "/guilds/{guild.id}/scheduled-events",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Returns a list of [guild scheduled event](#DOCS_RESOURCES_GUILD_SCHEDULED_EVENT/guild-scheduled-event-object) objects for the given guild."
         },
         {
             "name": "Create Guild Scheduled Event",
@@ -14,7 +15,8 @@
             "route": "/guilds/{guild.id}/scheduled-events",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Create a guild scheduled event in the guild. Returns a [guild scheduled event](#DOCS_RESOURCES_GUILD_SCHEDULED_EVENT/guild-scheduled-event-object) object on success."
         },
         {
             "name": "Get Guild Scheduled Event",
@@ -23,7 +25,8 @@
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
                 "guild_scheduled_event.id": "DOCS_RESOURCES_GUILD_SCHEDULED_EVENT/guild-scheduled-event-object"
-            }
+            },
+            "description": "Get a guild scheduled event. Returns a [guild scheduled event](#DOCS_RESOURCES_GUILD_SCHEDULED_EVENT/guild-scheduled-event-object) object on success."
         },
         {
             "name": "Modify Guild Scheduled Event",
@@ -32,7 +35,8 @@
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
                 "guild_scheduled_event.id": "DOCS_RESOURCES_GUILD_SCHEDULED_EVENT/guild-scheduled-event-object"
-            }
+            },
+            "description": "Modify a guild scheduled event. Returns the modified [guild scheduled event](#DOCS_RESOURCES_GUILD_SCHEDULED_EVENT/guild-scheduled-event-object) object on success."
         },
         {
             "name": "Delete Guild Scheduled Event",
@@ -41,7 +45,8 @@
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
                 "guild_scheduled_event.id": "DOCS_RESOURCES_GUILD_SCHEDULED_EVENT/guild-scheduled-event-object"
-            }
+            },
+            "description": "Delete a guild scheduled event. Returns a `204` on success."
         },
         {
             "name": "Get Guild Scheduled Event Users",
@@ -50,7 +55,8 @@
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
                 "guild_scheduled_event.id": "DOCS_RESOURCES_GUILD_SCHEDULED_EVENT/guild-scheduled-event-object"
-            }
+            },
+            "description": "Get a list of guild scheduled event users subscribed to a guild scheduled event. Returns a list of [guild scheduled event user](#DOCS_RESOURCES_GUILD_SCHEDULED_EVENT/guild-scheduled-event-user-object) objects on success. Guild member data, if it exists, is included if the `with_member` query parameter is set."
         }
     ]
 }

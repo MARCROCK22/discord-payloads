@@ -6,13 +6,15 @@
             "route": "/stickers/{sticker.id}",
             "parameters": {
                 "sticker.id": "DOCS_RESOURCES_STICKER/sticker-object"
-            }
+            },
+            "description": "Returns a [sticker](#DOCS_RESOURCES_STICKER/sticker-object) object for the given sticker ID."
         },
         {
             "name": "List Nitro Sticker Packs",
             "method": "GET",
             "route": "/sticker-packs",
-            "parameters": {}
+            "parameters": {},
+            "description": "Returns the list of sticker packs available to Nitro subscribers."
         },
         {
             "name": "List Guild Stickers",
@@ -20,7 +22,8 @@
             "route": "/guilds/{guild.id}/stickers",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Returns an array of [sticker](#DOCS_RESOURCES_STICKER/sticker-object) objects for the given guild. Includes `user` fields if the bot has the `MANAGE_EMOJIS_AND_STICKERS` permission."
         },
         {
             "name": "Get Guild Sticker",
@@ -29,7 +32,8 @@
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
                 "sticker.id": "DOCS_RESOURCES_STICKER/sticker-object"
-            }
+            },
+            "description": "Returns a [sticker](#DOCS_RESOURCES_STICKER/sticker-object) object for the given guild and sticker IDs. Includes the `user` field if the bot has the `MANAGE_EMOJIS_AND_STICKERS` permission."
         },
         {
             "name": "Create Guild Sticker",
@@ -37,7 +41,8 @@
             "route": "/guilds/{guild.id}/stickers",
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
-            }
+            },
+            "description": "Create a new sticker for the guild. Send a `multipart/form-data` body. Requires the `MANAGE_EMOJIS_AND_STICKERS` permission. Returns the new [sticker](#DOCS_RESOURCES_STICKER/sticker-object) object on success."
         },
         {
             "name": "Modify Guild Sticker",
@@ -46,7 +51,8 @@
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
                 "sticker.id": "DOCS_RESOURCES_STICKER/sticker-object"
-            }
+            },
+            "description": "Modify the given sticker. Requires the `MANAGE_EMOJIS_AND_STICKERS` permission. Returns the updated [sticker](#DOCS_RESOURCES_STICKER/sticker-object) object on success."
         },
         {
             "name": "Delete Guild Sticker",
@@ -55,7 +61,8 @@
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
                 "sticker.id": "DOCS_RESOURCES_STICKER/sticker-object"
-            }
+            },
+            "description": "Delete the given sticker. Requires the `MANAGE_EMOJIS_AND_STICKERS` permission. Returns `204 No Content` on success."
         }
     ]
 }

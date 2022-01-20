@@ -13,6 +13,7 @@ class Endpoint(BaseModel):
     method: Literal["GET", "POST", "PUT", "PATCH", "DELETE"]
     route: str
     parameters: Dict[str, Optional[str]]
+    description: str = ""
 
     @classmethod
     def try_parse(cls, heading: Heading) -> Optional[Endpoint]:
