@@ -7,7 +7,8 @@
             "parameters": {
                 "template.code": "DOCS_RESOURCES_GUILD_TEMPLATE/guild-template-object"
             },
-            "description": "Returns a [guild template](#DOCS_RESOURCES_GUILD_TEMPLATE/guild-template-object) object for the given code."
+            "description": "Returns a [guild template](#DOCS_RESOURCES_GUILD_TEMPLATE/guild-template-object) object for the given code.",
+            "return_type": "[guild template](#DOCS_RESOURCES_GUILD_TEMPLATE/guild-template-object)"
         },
         {
             "name": "Create Guild from Guild Template",
@@ -16,7 +17,8 @@
             "parameters": {
                 "template.code": "DOCS_RESOURCES_GUILD_TEMPLATE/guild-template-object"
             },
-            "description": "Create a new guild based on a template. Returns a [guild](#DOCS_RESOURCES_GUILD/guild-object) object on success. Fires a [Guild Create](#DOCS_TOPICS_GATEWAY/guild-create) Gateway event."
+            "description": "Create a new guild based on a template. Returns a [guild](#DOCS_RESOURCES_GUILD/guild-object) object on success. Fires a [Guild Create](#DOCS_TOPICS_GATEWAY/guild-create) Gateway event.",
+            "return_type": "[guild](#DOCS_RESOURCES_GUILD/guild-object)"
         },
         {
             "name": "Get Guild Templates",
@@ -25,7 +27,8 @@
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
             },
-            "description": "Returns an array of [guild template](#DOCS_RESOURCES_GUILD_TEMPLATE/guild-template-object) objects. Requires the `MANAGE_GUILD` permission."
+            "description": "Returns an array of [guild template](#DOCS_RESOURCES_GUILD_TEMPLATE/guild-template-object) objects. Requires the `MANAGE_GUILD` permission.",
+            "return_type": "list of [guild template](#DOCS_RESOURCES_GUILD_TEMPLATE/guild-template-object)"
         },
         {
             "name": "Create Guild Template",
@@ -34,7 +37,8 @@
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
             },
-            "description": "Creates a template for the guild. Requires the `MANAGE_GUILD` permission. Returns the created [guild template](#DOCS_RESOURCES_GUILD_TEMPLATE/guild-template-object) object on success."
+            "description": "Creates a template for the guild. Requires the `MANAGE_GUILD` permission. Returns the created [guild template](#DOCS_RESOURCES_GUILD_TEMPLATE/guild-template-object) object on success.",
+            "return_type": "[guild template](#DOCS_RESOURCES_GUILD_TEMPLATE/guild-template-object)"
         },
         {
             "name": "Sync Guild Template",
@@ -44,7 +48,8 @@
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
                 "template.code": "DOCS_RESOURCES_GUILD_TEMPLATE/guild-template-object"
             },
-            "description": "Syncs the template to the guild's current state. Requires the `MANAGE_GUILD` permission. Returns the [guild template](#DOCS_RESOURCES_GUILD_TEMPLATE/guild-template-object) object on success."
+            "description": "Syncs the template to the guild's current state. Requires the `MANAGE_GUILD` permission. Returns the [guild template](#DOCS_RESOURCES_GUILD_TEMPLATE/guild-template-object) object on success.",
+            "return_type": "[guild template](#DOCS_RESOURCES_GUILD_TEMPLATE/guild-template-object)"
         },
         {
             "name": "Modify Guild Template",
@@ -54,7 +59,8 @@
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
                 "template.code": "DOCS_RESOURCES_GUILD_TEMPLATE/guild-template-object"
             },
-            "description": "Modifies the template's metadata. Requires the `MANAGE_GUILD` permission. Returns the [guild template](#DOCS_RESOURCES_GUILD_TEMPLATE/guild-template-object) object on success."
+            "description": "Modifies the template's metadata. Requires the `MANAGE_GUILD` permission. Returns the [guild template](#DOCS_RESOURCES_GUILD_TEMPLATE/guild-template-object) object on success.",
+            "return_type": "[guild template](#DOCS_RESOURCES_GUILD_TEMPLATE/guild-template-object)"
         },
         {
             "name": "Delete Guild Template",
@@ -64,7 +70,8 @@
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
                 "template.code": "DOCS_RESOURCES_GUILD_TEMPLATE/guild-template-object"
             },
-            "description": "Deletes the template. Requires the `MANAGE_GUILD` permission. Returns the deleted [guild template](#DOCS_RESOURCES_GUILD_TEMPLATE/guild-template-object) object on success."
+            "description": "Deletes the template. Requires the `MANAGE_GUILD` permission. Returns the deleted [guild template](#DOCS_RESOURCES_GUILD_TEMPLATE/guild-template-object) object on success.",
+            "return_type": "[guild template](#DOCS_RESOURCES_GUILD_TEMPLATE/guild-template-object)"
         }
     ]
 }

@@ -7,7 +7,8 @@
             "parameters": {
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
             },
-            "description": "Create a new webhook. Requires the `MANAGE_WEBHOOKS` permission. Returns a [webhook](#DOCS_RESOURCES_WEBHOOK/webhook-object) object on success. Webhook names follow our naming restrictions that can be found in our [Usernames and Nicknames](#DOCS_RESOURCES_USER/usernames-and-nicknames) documentation, with the following additional stipulations:"
+            "description": "Create a new webhook. Requires the `MANAGE_WEBHOOKS` permission. Returns a [webhook](#DOCS_RESOURCES_WEBHOOK/webhook-object) object on success. Webhook names follow our naming restrictions that can be found in our [Usernames and Nicknames](#DOCS_RESOURCES_USER/usernames-and-nicknames) documentation, with the following additional stipulations:",
+            "return_type": "[webhook](#DOCS_RESOURCES_WEBHOOK/webhook-object)"
         },
         {
             "name": "Get Channel Webhooks",
@@ -16,7 +17,8 @@
             "parameters": {
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
             },
-            "description": "Returns a list of channel [webhook](#DOCS_RESOURCES_WEBHOOK/webhook-object) objects. Requires the `MANAGE_WEBHOOKS` permission."
+            "description": "Returns a list of channel [webhook](#DOCS_RESOURCES_WEBHOOK/webhook-object) objects. Requires the `MANAGE_WEBHOOKS` permission.",
+            "return_type": "list of [webhook](#DOCS_RESOURCES_WEBHOOK/webhook-object)"
         },
         {
             "name": "Get Guild Webhooks",
@@ -25,7 +27,8 @@
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
             },
-            "description": "Returns a list of guild [webhook](#DOCS_RESOURCES_WEBHOOK/webhook-object) objects. Requires the `MANAGE_WEBHOOKS` permission."
+            "description": "Returns a list of guild [webhook](#DOCS_RESOURCES_WEBHOOK/webhook-object) objects. Requires the `MANAGE_WEBHOOKS` permission.",
+            "return_type": "list of [webhook](#DOCS_RESOURCES_WEBHOOK/webhook-object)"
         },
         {
             "name": "Get Webhook",
@@ -34,7 +37,8 @@
             "parameters": {
                 "webhook.id": "DOCS_RESOURCES_WEBHOOK/webhook-object"
             },
-            "description": "Returns the new [webhook](#DOCS_RESOURCES_WEBHOOK/webhook-object) object for the given id."
+            "description": "Returns the new [webhook](#DOCS_RESOURCES_WEBHOOK/webhook-object) object for the given id.",
+            "return_type": "[webhook](#DOCS_RESOURCES_WEBHOOK/webhook-object)"
         },
         {
             "name": "Get Webhook with Token",
@@ -44,7 +48,8 @@
                 "webhook.id": "DOCS_RESOURCES_WEBHOOK/webhook-object",
                 "webhook.token": "DOCS_RESOURCES_WEBHOOK/webhook-object"
             },
-            "description": "Same as above, except this call does not require authentication and returns no user in the webhook object."
+            "description": "Same as above, except this call does not require authentication and returns no user in the webhook object.",
+            "return_type": null
         },
         {
             "name": "Modify Webhook",
@@ -53,7 +58,8 @@
             "parameters": {
                 "webhook.id": "DOCS_RESOURCES_WEBHOOK/webhook-object"
             },
-            "description": "Modify a webhook. Requires the `MANAGE_WEBHOOKS` permission. Returns the updated [webhook](#DOCS_RESOURCES_WEBHOOK/webhook-object) object on success."
+            "description": "Modify a webhook. Requires the `MANAGE_WEBHOOKS` permission. Returns the updated [webhook](#DOCS_RESOURCES_WEBHOOK/webhook-object) object on success.",
+            "return_type": "[webhook](#DOCS_RESOURCES_WEBHOOK/webhook-object)"
         },
         {
             "name": "Modify Webhook with Token",
@@ -63,7 +69,8 @@
                 "webhook.id": "DOCS_RESOURCES_WEBHOOK/webhook-object",
                 "webhook.token": "DOCS_RESOURCES_WEBHOOK/webhook-object"
             },
-            "description": "Same as above, except this call does not require authentication, does not accept a `channel_id` parameter in the body, and does not return a user in the webhook object."
+            "description": "Same as above, except this call does not require authentication, does not accept a `channel_id` parameter in the body, and does not return a user in the webhook object.",
+            "return_type": null
         },
         {
             "name": "Delete Webhook",
@@ -72,7 +79,8 @@
             "parameters": {
                 "webhook.id": "DOCS_RESOURCES_WEBHOOK/webhook-object"
             },
-            "description": "Delete a webhook permanently. Requires the `MANAGE_WEBHOOKS` permission. Returns a `204 No Content` response on success."
+            "description": "Delete a webhook permanently. Requires the `MANAGE_WEBHOOKS` permission. Returns a `204 No Content` response on success.",
+            "return_type": null
         },
         {
             "name": "Delete Webhook with Token",
@@ -82,7 +90,8 @@
                 "webhook.id": "DOCS_RESOURCES_WEBHOOK/webhook-object",
                 "webhook.token": "DOCS_RESOURCES_WEBHOOK/webhook-object"
             },
-            "description": "Same as above, except this call does not require authentication."
+            "description": "Same as above, except this call does not require authentication.",
+            "return_type": null
         },
         {
             "name": "Execute Webhook",
@@ -92,7 +101,8 @@
                 "webhook.id": "DOCS_RESOURCES_WEBHOOK/webhook-object",
                 "webhook.token": "DOCS_RESOURCES_WEBHOOK/webhook-object"
             },
-            "description": "Refer to [Uploading Files](#DOCS_REFERENCE/uploading-files) for details on attachments and `multipart/form-data` requests."
+            "description": "Refer to [Uploading Files](#DOCS_REFERENCE/uploading-files) for details on attachments and `multipart/form-data` requests.",
+            "return_type": null
         },
         {
             "name": "Execute Slack-Compatible Webhook",
@@ -102,7 +112,8 @@
                 "webhook.id": "DOCS_RESOURCES_WEBHOOK/webhook-object",
                 "webhook.token": "DOCS_RESOURCES_WEBHOOK/webhook-object"
             },
-            "description": "Refer to [Slack's documentation](https://api.slack.com/incoming-webhooks) for more information. We do not support Slack's `channel`, `icon_emoji`, `mrkdwn`, or `mrkdwn_in` properties."
+            "description": "Refer to [Slack's documentation](https://api.slack.com/incoming-webhooks) for more information. We do not support Slack's `channel`, `icon_emoji`, `mrkdwn`, or `mrkdwn_in` properties.",
+            "return_type": null
         },
         {
             "name": "Execute GitHub-Compatible Webhook",
@@ -112,7 +123,8 @@
                 "webhook.id": "DOCS_RESOURCES_WEBHOOK/webhook-object",
                 "webhook.token": "DOCS_RESOURCES_WEBHOOK/webhook-object"
             },
-            "description": "Add a new webhook to your GitHub repo (in the repo's settings), and use this endpoint as the \"Payload URL.\" You can choose what events your Discord channel receives by choosing the \"Let me select individual events\" option and selecting individual events for the new webhook you're configuring."
+            "description": "Add a new webhook to your GitHub repo (in the repo's settings), and use this endpoint as the \"Payload URL.\" You can choose what events your Discord channel receives by choosing the \"Let me select individual events\" option and selecting individual events for the new webhook you're configuring.",
+            "return_type": null
         },
         {
             "name": "Get Webhook Message",
@@ -123,7 +135,8 @@
                 "webhook.token": "DOCS_RESOURCES_WEBHOOK/webhook-object",
                 "message.id": "DOCS_RESOURCES_CHANNEL/message-object"
             },
-            "description": "Returns a previously-sent webhook message from the same token. Returns a [message](#DOCS_RESOURCES_CHANNEL/message-object) object on success."
+            "description": "Returns a previously-sent webhook message from the same token. Returns a [message](#DOCS_RESOURCES_CHANNEL/message-object) object on success.",
+            "return_type": "[message](#DOCS_RESOURCES_CHANNEL/message-object)"
         },
         {
             "name": "Edit Webhook Message",
@@ -134,7 +147,8 @@
                 "webhook.token": "DOCS_RESOURCES_WEBHOOK/webhook-object",
                 "message.id": "DOCS_RESOURCES_CHANNEL/message-object"
             },
-            "description": "Edits a previously-sent webhook message from the same token. Returns a [message](#DOCS_RESOURCES_CHANNEL/message-object) object on success.\nWhen the `content` field is edited, the `mentions` array in the message object will be reconstructed from scratch based on the new content. The `allowed_mentions` field of the edit request controls how this happens. If there is no explicit `allowed_mentions` in the edit request, the content will be parsed with _default_ allowances, that is, without regard to whether or not an `allowed_mentions` was present in the request that originally created the message.\nRefer to [Uploading Files](#DOCS_REFERENCE/uploading-files) for details on attachments and `multipart/form-data` requests.\nAny provided files will be **appended** to the message. To remove or replace files you will have to supply the `attachments` field which specifies the files to retain on the message after edit."
+            "description": "Edits a previously-sent webhook message from the same token. Returns a [message](#DOCS_RESOURCES_CHANNEL/message-object) object on success.\nWhen the `content` field is edited, the `mentions` array in the message object will be reconstructed from scratch based on the new content. The `allowed_mentions` field of the edit request controls how this happens. If there is no explicit `allowed_mentions` in the edit request, the content will be parsed with _default_ allowances, that is, without regard to whether or not an `allowed_mentions` was present in the request that originally created the message.\nRefer to [Uploading Files](#DOCS_REFERENCE/uploading-files) for details on attachments and `multipart/form-data` requests.\nAny provided files will be **appended** to the message. To remove or replace files you will have to supply the `attachments` field which specifies the files to retain on the message after edit.",
+            "return_type": "[message](#DOCS_RESOURCES_CHANNEL/message-object)"
         },
         {
             "name": "Delete Webhook Message",
@@ -145,7 +159,8 @@
                 "webhook.token": "DOCS_RESOURCES_WEBHOOK/webhook-object",
                 "message.id": "DOCS_RESOURCES_CHANNEL/message-object"
             },
-            "description": "Deletes a message that was created by the webhook. Returns a `204 No Content` response on success."
+            "description": "Deletes a message that was created by the webhook. Returns a `204 No Content` response on success.",
+            "return_type": null
         }
     ]
 }

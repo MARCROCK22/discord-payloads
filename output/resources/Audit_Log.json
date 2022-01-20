@@ -7,7 +7,8 @@
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
             },
-            "description": "Returns an [audit log](#DOCS_RESOURCES_AUDIT_LOG/audit-log-object) object for the guild. Requires the 'VIEW_AUDIT_LOG' permission."
+            "description": "Returns an [audit log](#DOCS_RESOURCES_AUDIT_LOG/audit-log-object) object for the guild. Requires the 'VIEW_AUDIT_LOG' permission.",
+            "return_type": "[audit log](#DOCS_RESOURCES_AUDIT_LOG/audit-log-object)"
         }
     ]
 }

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
 import re
-from typing import Any, Dict, Literal, Optional, Tuple
+from typing import Any, Dict, List, Literal, Optional, Tuple
 
 from pydantic import BaseModel
 
-from .mistune_types import Heading
+from .mistune_types import Element, Heading, Paragraph
 
 
 class Endpoint(BaseModel):
@@ -14,6 +14,7 @@ class Endpoint(BaseModel):
     route: str
     parameters: Dict[str, Optional[str]]
     description: str = ""
+    return_type: Optional[str] = None
 
     @classmethod
     def try_parse(cls, heading: Heading) -> Optional[Endpoint]:
@@ -36,3 +37,27 @@ class Endpoint(BaseModel):
         params: Dict[str, Optional[str]] = {}
         route = re.sub(r"\{(?P<name>[^#}]+)(?:#(?P<link>[^}]+))?\}", repl, route)
         return route, params
+
+    @staticmethod
+    def extract_description(elements: List[Element]) -> str:
+        assert all(not isinstance(e, Heading) for e in elements)
+        return "\n".join(p.text for p in elements if isinstance(p, Paragraph))
+
+    @staticmethod
+    def extract_returntype(description: str) -> Optional[str]:
+        matches = list(
+            re.finditer(
+                r"[Rr]eturn[^\.;:]*?(?P<link>\[.+?\]\(.+?\)).*?[\.;:]", description, re.DOTALL
+            )
+        )
+        if not matches:
+            return None
+
+        types = [m["link"] for m in matches]
+        assert len(set(types)) == 1, f"found different return types: {types}"
+
+        match = matches[0]
+        ret = match["link"]
+        if any(x in match.group().lower() for x in ("list of", "array of")):
+            return f"list of {ret}"
+        return ret

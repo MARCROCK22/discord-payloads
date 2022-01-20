@@ -7,7 +7,8 @@
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
             },
-            "description": "Returns a list of [emoji](#DOCS_RESOURCES_EMOJI/emoji-object) objects for the given guild."
+            "description": "Returns a list of [emoji](#DOCS_RESOURCES_EMOJI/emoji-object) objects for the given guild.",
+            "return_type": "list of [emoji](#DOCS_RESOURCES_EMOJI/emoji-object)"
         },
         {
             "name": "Get Guild Emoji",
@@ -17,7 +18,8 @@
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
                 "emoji.id": "DOCS_RESOURCES_EMOJI/emoji-object"
             },
-            "description": "Returns an [emoji](#DOCS_RESOURCES_EMOJI/emoji-object) object for the given guild and emoji IDs."
+            "description": "Returns an [emoji](#DOCS_RESOURCES_EMOJI/emoji-object) object for the given guild and emoji IDs.",
+            "return_type": "[emoji](#DOCS_RESOURCES_EMOJI/emoji-object)"
         },
         {
             "name": "Create Guild Emoji",
@@ -26,7 +28,8 @@
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
             },
-            "description": "Create a new emoji for the guild. Requires the `MANAGE_EMOJIS_AND_STICKERS` permission. Returns the new [emoji](#DOCS_RESOURCES_EMOJI/emoji-object) object on success. Fires a [Guild Emojis Update](#DOCS_TOPICS_GATEWAY/guild-emojis-update) Gateway event."
+            "description": "Create a new emoji for the guild. Requires the `MANAGE_EMOJIS_AND_STICKERS` permission. Returns the new [emoji](#DOCS_RESOURCES_EMOJI/emoji-object) object on success. Fires a [Guild Emojis Update](#DOCS_TOPICS_GATEWAY/guild-emojis-update) Gateway event.",
+            "return_type": "[emoji](#DOCS_RESOURCES_EMOJI/emoji-object)"
         },
         {
             "name": "Modify Guild Emoji",
@@ -36,7 +39,8 @@
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
                 "emoji.id": "DOCS_RESOURCES_EMOJI/emoji-object"
             },
-            "description": "Modify the given emoji. Requires the `MANAGE_EMOJIS_AND_STICKERS` permission. Returns the updated [emoji](#DOCS_RESOURCES_EMOJI/emoji-object) object on success. Fires a [Guild Emojis Update](#DOCS_TOPICS_GATEWAY/guild-emojis-update) Gateway event."
+            "description": "Modify the given emoji. Requires the `MANAGE_EMOJIS_AND_STICKERS` permission. Returns the updated [emoji](#DOCS_RESOURCES_EMOJI/emoji-object) object on success. Fires a [Guild Emojis Update](#DOCS_TOPICS_GATEWAY/guild-emojis-update) Gateway event.",
+            "return_type": "[emoji](#DOCS_RESOURCES_EMOJI/emoji-object)"
         },
         {
             "name": "Delete Guild Emoji",
@@ -46,7 +50,8 @@
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
                 "emoji.id": "DOCS_RESOURCES_EMOJI/emoji-object"
             },
-            "description": "Delete the given emoji. Requires the `MANAGE_EMOJIS_AND_STICKERS` permission. Returns `204 No Content` on success. Fires a [Guild Emojis Update](#DOCS_TOPICS_GATEWAY/guild-emojis-update) Gateway event."
+            "description": "Delete the given emoji. Requires the `MANAGE_EMOJIS_AND_STICKERS` permission. Returns `204 No Content` on success. Fires a [Guild Emojis Update](#DOCS_TOPICS_GATEWAY/guild-emojis-update) Gateway event.",
+            "return_type": null
         }
     ]
 }

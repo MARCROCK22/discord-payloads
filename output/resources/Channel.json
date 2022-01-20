@@ -7,7 +7,8 @@
             "parameters": {
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
             },
-            "description": "Get a channel by ID. Returns a [channel](#DOCS_RESOURCES_CHANNEL/channel-object) object.  If the channel is a thread, a [thread member](#DOCS_RESOURCES_CHANNEL/thread-member-object) object is included in the returned result."
+            "description": "Get a channel by ID. Returns a [channel](#DOCS_RESOURCES_CHANNEL/channel-object) object.  If the channel is a thread, a [thread member](#DOCS_RESOURCES_CHANNEL/thread-member-object) object is included in the returned result.",
+            "return_type": "[channel](#DOCS_RESOURCES_CHANNEL/channel-object)"
         },
         {
             "name": "Modify Channel",
@@ -16,7 +17,8 @@
             "parameters": {
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
             },
-            "description": "Update a channel's settings. Returns a [channel](#DOCS_RESOURCES_CHANNEL/channel-object) on success, and a 400 BAD REQUEST on invalid parameters. All JSON parameters are optional."
+            "description": "Update a channel's settings. Returns a [channel](#DOCS_RESOURCES_CHANNEL/channel-object) on success, and a 400 BAD REQUEST on invalid parameters. All JSON parameters are optional.",
+            "return_type": "[channel](#DOCS_RESOURCES_CHANNEL/channel-object)"
         },
         {
             "name": "Delete/Close Channel",
@@ -25,7 +27,8 @@
             "parameters": {
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
             },
-            "description": "Delete a channel, or close a private message. Requires the `MANAGE_CHANNELS` permission for the guild, or `MANAGE_THREADS` if the channel is a thread. Deleting a category does not delete its child channels; they will have their `parent_id` removed and a [Channel Update](#DOCS_TOPICS_GATEWAY/channel-update) Gateway event will fire for each of them. Returns a [channel](#DOCS_RESOURCES_CHANNEL/channel-object) object on success. Fires a [Channel Delete](#DOCS_TOPICS_GATEWAY/channel-delete) Gateway event (or [Thread Delete](#DOCS_TOPICS_GATEWAY/thread-delete) if the channel was a thread)."
+            "description": "Delete a channel, or close a private message. Requires the `MANAGE_CHANNELS` permission for the guild, or `MANAGE_THREADS` if the channel is a thread. Deleting a category does not delete its child channels; they will have their `parent_id` removed and a [Channel Update](#DOCS_TOPICS_GATEWAY/channel-update) Gateway event will fire for each of them. Returns a [channel](#DOCS_RESOURCES_CHANNEL/channel-object) object on success. Fires a [Channel Delete](#DOCS_TOPICS_GATEWAY/channel-delete) Gateway event (or [Thread Delete](#DOCS_TOPICS_GATEWAY/thread-delete) if the channel was a thread).",
+            "return_type": "[channel](#DOCS_RESOURCES_CHANNEL/channel-object)"
         },
         {
             "name": "Get Channel Messages",
@@ -34,7 +37,8 @@
             "parameters": {
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
             },
-            "description": "Returns the messages for a channel. If operating on a guild channel, this endpoint requires the `VIEW_CHANNEL` permission to be present on the current user. If the current user is missing the 'READ_MESSAGE_HISTORY' permission in the channel then this will return no messages (since they cannot read the message history). Returns an array of [message](#DOCS_RESOURCES_CHANNEL/message-object) objects on success."
+            "description": "Returns the messages for a channel. If operating on a guild channel, this endpoint requires the `VIEW_CHANNEL` permission to be present on the current user. If the current user is missing the 'READ_MESSAGE_HISTORY' permission in the channel then this will return no messages (since they cannot read the message history). Returns an array of [message](#DOCS_RESOURCES_CHANNEL/message-object) objects on success.",
+            "return_type": "list of [message](#DOCS_RESOURCES_CHANNEL/message-object)"
         },
         {
             "name": "Get Channel Message",
@@ -44,7 +48,8 @@
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
                 "message.id": "DOCS_RESOURCES_CHANNEL/message-object"
             },
-            "description": "Returns a specific message in the channel. If operating on a guild channel, this endpoint requires the 'READ_MESSAGE_HISTORY' permission to be present on the current user. Returns a [message](#DOCS_RESOURCES_CHANNEL/message-object) object on success."
+            "description": "Returns a specific message in the channel. If operating on a guild channel, this endpoint requires the 'READ_MESSAGE_HISTORY' permission to be present on the current user. Returns a [message](#DOCS_RESOURCES_CHANNEL/message-object) object on success.",
+            "return_type": "[message](#DOCS_RESOURCES_CHANNEL/message-object)"
         },
         {
             "name": "Create Message",
@@ -53,7 +58,8 @@
             "parameters": {
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
             },
-            "description": "Post a message to a guild text or DM channel. Returns a [message](#DOCS_RESOURCES_CHANNEL/message-object) object. Fires a [Message Create](#DOCS_TOPICS_GATEWAY/message-create) Gateway event. See [message formatting](#DOCS_REFERENCE/message-formatting) for more information on how to properly format messages.\nYou may create a message as a reply to another message. To do so, include a [`message_reference`](#DOCS_RESOURCES_CHANNEL/message-reference-object-message-reference-structure) with a `message_id`. The `channel_id` and `guild_id` in the `message_reference` are optional, but will be validated if provided.\nFiles must be attached using a `multipart/form-data` body as described in [Uploading Files](#DOCS_REFERENCE/uploading-files)."
+            "description": "Post a message to a guild text or DM channel. Returns a [message](#DOCS_RESOURCES_CHANNEL/message-object) object. Fires a [Message Create](#DOCS_TOPICS_GATEWAY/message-create) Gateway event. See [message formatting](#DOCS_REFERENCE/message-formatting) for more information on how to properly format messages.\nYou may create a message as a reply to another message. To do so, include a [`message_reference`](#DOCS_RESOURCES_CHANNEL/message-reference-object-message-reference-structure) with a `message_id`. The `channel_id` and `guild_id` in the `message_reference` are optional, but will be validated if provided.\nFiles must be attached using a `multipart/form-data` body as described in [Uploading Files](#DOCS_REFERENCE/uploading-files).",
+            "return_type": "[message](#DOCS_RESOURCES_CHANNEL/message-object)"
         },
         {
             "name": "Crosspost Message",
@@ -63,7 +69,8 @@
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
                 "message.id": "DOCS_RESOURCES_CHANNEL/message-object"
             },
-            "description": "Crosspost a message in a News Channel to following channels. This endpoint requires the 'SEND_MESSAGES' permission, if the current user sent the message, or additionally the 'MANAGE_MESSAGES' permission, for all other messages, to be present for the current user.\nReturns a [message](#DOCS_RESOURCES_CHANNEL/message-object) object."
+            "description": "Crosspost a message in a News Channel to following channels. This endpoint requires the 'SEND_MESSAGES' permission, if the current user sent the message, or additionally the 'MANAGE_MESSAGES' permission, for all other messages, to be present for the current user.\nReturns a [message](#DOCS_RESOURCES_CHANNEL/message-object) object.",
+            "return_type": "[message](#DOCS_RESOURCES_CHANNEL/message-object)"
         },
         {
             "name": "Create Reaction",
@@ -74,7 +81,8 @@
                 "message.id": "DOCS_RESOURCES_CHANNEL/message-object",
                 "emoji": "DOCS_RESOURCES_EMOJI/emoji-object"
             },
-            "description": "Create a reaction for the message. This endpoint requires the 'READ_MESSAGE_HISTORY' permission to be present on the current user. Additionally, if nobody else has reacted to the message using this emoji, this endpoint requires the 'ADD_REACTIONS' permission to be present on the current user. Returns a 204 empty response on success.\nThe `emoji` must be [URL Encoded](https://en.wikipedia.org/wiki/Percent-encoding) or the request will fail with `10014: Unknown Emoji`. To use custom emoji, you must encode it in the format `name:id` with the emoji name and emoji id."
+            "description": "Create a reaction for the message. This endpoint requires the 'READ_MESSAGE_HISTORY' permission to be present on the current user. Additionally, if nobody else has reacted to the message using this emoji, this endpoint requires the 'ADD_REACTIONS' permission to be present on the current user. Returns a 204 empty response on success.\nThe `emoji` must be [URL Encoded](https://en.wikipedia.org/wiki/Percent-encoding) or the request will fail with `10014: Unknown Emoji`. To use custom emoji, you must encode it in the format `name:id` with the emoji name and emoji id.",
+            "return_type": null
         },
         {
             "name": "Delete Own Reaction",
@@ -85,7 +93,8 @@
                 "message.id": "DOCS_RESOURCES_CHANNEL/message-object",
                 "emoji": "DOCS_RESOURCES_EMOJI/emoji-object"
             },
-            "description": "Delete a reaction the current user has made for the message. Returns a 204 empty response on success.\nThe `emoji` must be [URL Encoded](https://en.wikipedia.org/wiki/Percent-encoding) or the request will fail with `10014: Unknown Emoji`. To use custom emoji, you must encode it in the format `name:id` with the emoji name and emoji id."
+            "description": "Delete a reaction the current user has made for the message. Returns a 204 empty response on success.\nThe `emoji` must be [URL Encoded](https://en.wikipedia.org/wiki/Percent-encoding) or the request will fail with `10014: Unknown Emoji`. To use custom emoji, you must encode it in the format `name:id` with the emoji name and emoji id.",
+            "return_type": null
         },
         {
             "name": "Delete User Reaction",
@@ -97,7 +106,8 @@
                 "emoji": "DOCS_RESOURCES_EMOJI/emoji-object",
                 "user.id": "DOCS_RESOURCES_USER/user-object"
             },
-            "description": "Deletes another user's reaction. This endpoint requires the 'MANAGE_MESSAGES' permission to be present on the current user. Returns a 204 empty response on success.\nThe `emoji` must be [URL Encoded](https://en.wikipedia.org/wiki/Percent-encoding) or the request will fail with `10014: Unknown Emoji`. To use custom emoji, you must encode it in the format `name:id` with the emoji name and emoji id."
+            "description": "Deletes another user's reaction. This endpoint requires the 'MANAGE_MESSAGES' permission to be present on the current user. Returns a 204 empty response on success.\nThe `emoji` must be [URL Encoded](https://en.wikipedia.org/wiki/Percent-encoding) or the request will fail with `10014: Unknown Emoji`. To use custom emoji, you must encode it in the format `name:id` with the emoji name and emoji id.",
+            "return_type": null
         },
         {
             "name": "Get Reactions",
@@ -108,7 +118,8 @@
                 "message.id": "DOCS_RESOURCES_CHANNEL/message-object",
                 "emoji": "DOCS_RESOURCES_EMOJI/emoji-object"
             },
-            "description": "Get a list of users that reacted with this emoji. Returns an array of [user](#DOCS_RESOURCES_USER/user-object) objects on success.\nThe `emoji` must be [URL Encoded](https://en.wikipedia.org/wiki/Percent-encoding) or the request will fail with `10014: Unknown Emoji`. To use custom emoji, you must encode it in the format `name:id` with the emoji name and emoji id."
+            "description": "Get a list of users that reacted with this emoji. Returns an array of [user](#DOCS_RESOURCES_USER/user-object) objects on success.\nThe `emoji` must be [URL Encoded](https://en.wikipedia.org/wiki/Percent-encoding) or the request will fail with `10014: Unknown Emoji`. To use custom emoji, you must encode it in the format `name:id` with the emoji name and emoji id.",
+            "return_type": "list of [user](#DOCS_RESOURCES_USER/user-object)"
         },
         {
             "name": "Delete All Reactions",
@@ -118,7 +129,8 @@
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
                 "message.id": "DOCS_RESOURCES_CHANNEL/message-object"
             },
-            "description": "Deletes all reactions on a message. This endpoint requires the 'MANAGE_MESSAGES' permission to be present on the current user. Fires a [Message Reaction Remove All](#DOCS_TOPICS_GATEWAY/message-reaction-remove-all) Gateway event."
+            "description": "Deletes all reactions on a message. This endpoint requires the 'MANAGE_MESSAGES' permission to be present on the current user. Fires a [Message Reaction Remove All](#DOCS_TOPICS_GATEWAY/message-reaction-remove-all) Gateway event.",
+            "return_type": null
         },
         {
             "name": "Delete All Reactions for Emoji",
@@ -129,7 +141,8 @@
                 "message.id": "DOCS_RESOURCES_CHANNEL/message-object",
                 "emoji": "DOCS_RESOURCES_EMOJI/emoji-object"
             },
-            "description": "Deletes all the reactions for a given emoji on a message. This endpoint requires the `MANAGE_MESSAGES` permission to be present on the current user. Fires a [Message Reaction Remove Emoji](#DOCS_TOPICS_GATEWAY/message-reaction-remove-emoji) Gateway event.\nThe `emoji` must be [URL Encoded](https://en.wikipedia.org/wiki/Percent-encoding) or the request will fail with `10014: Unknown Emoji`. To use custom emoji, you must encode it in the format `name:id` with the emoji name and emoji id."
+            "description": "Deletes all the reactions for a given emoji on a message. This endpoint requires the `MANAGE_MESSAGES` permission to be present on the current user. Fires a [Message Reaction Remove Emoji](#DOCS_TOPICS_GATEWAY/message-reaction-remove-emoji) Gateway event.\nThe `emoji` must be [URL Encoded](https://en.wikipedia.org/wiki/Percent-encoding) or the request will fail with `10014: Unknown Emoji`. To use custom emoji, you must encode it in the format `name:id` with the emoji name and emoji id.",
+            "return_type": null
         },
         {
             "name": "Edit Message",
@@ -139,7 +152,8 @@
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
                 "message.id": "DOCS_RESOURCES_CHANNEL/message-object"
             },
-            "description": "Edit a previously sent message. The fields `content`, `embeds`, and `flags` can be edited by the original message author. Other users can only edit `flags` and only if they have the `MANAGE_MESSAGES` permission in the corresponding channel. When specifying flags, ensure to include all previously set flags/bits in addition to ones that you are modifying. Only `flags` documented in the table below may be modified by users (unsupported flag changes are currently ignored without error).\nWhen the `content` field is edited, the `mentions` array in the message object will be reconstructed from scratch based on the new content. The `allowed_mentions` field of the edit request controls how this happens. If there is no explicit `allowed_mentions` in the edit request, the content will be parsed with _default_ allowances, that is, without regard to whether or not an `allowed_mentions` was present in the request that originally created the message.\nReturns a [message](#DOCS_RESOURCES_CHANNEL/message-object) object. Fires a [Message Update](#DOCS_TOPICS_GATEWAY/message-update) Gateway event.\nRefer to [Uploading Files](#DOCS_REFERENCE/uploading-files) for details on attachments and `multipart/form-data` requests.\nAny provided files will be **appended** to the message. To remove or replace files you will have to supply the `attachments` field which specifies the files to retain on the message after edit."
+            "description": "Edit a previously sent message. The fields `content`, `embeds`, and `flags` can be edited by the original message author. Other users can only edit `flags` and only if they have the `MANAGE_MESSAGES` permission in the corresponding channel. When specifying flags, ensure to include all previously set flags/bits in addition to ones that you are modifying. Only `flags` documented in the table below may be modified by users (unsupported flag changes are currently ignored without error).\nWhen the `content` field is edited, the `mentions` array in the message object will be reconstructed from scratch based on the new content. The `allowed_mentions` field of the edit request controls how this happens. If there is no explicit `allowed_mentions` in the edit request, the content will be parsed with _default_ allowances, that is, without regard to whether or not an `allowed_mentions` was present in the request that originally created the message.\nReturns a [message](#DOCS_RESOURCES_CHANNEL/message-object) object. Fires a [Message Update](#DOCS_TOPICS_GATEWAY/message-update) Gateway event.\nRefer to [Uploading Files](#DOCS_REFERENCE/uploading-files) for details on attachments and `multipart/form-data` requests.\nAny provided files will be **appended** to the message. To remove or replace files you will have to supply the `attachments` field which specifies the files to retain on the message after edit.",
+            "return_type": "[message](#DOCS_RESOURCES_CHANNEL/message-object)"
         },
         {
             "name": "Delete Message",
@@ -149,7 +163,8 @@
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
                 "message.id": "DOCS_RESOURCES_CHANNEL/message-object"
             },
-            "description": "Delete a message. If operating on a guild channel and trying to delete a message that was not sent by the current user, this endpoint requires the `MANAGE_MESSAGES` permission. Returns a 204 empty response on success. Fires a [Message Delete](#DOCS_TOPICS_GATEWAY/message-delete) Gateway event."
+            "description": "Delete a message. If operating on a guild channel and trying to delete a message that was not sent by the current user, this endpoint requires the `MANAGE_MESSAGES` permission. Returns a 204 empty response on success. Fires a [Message Delete](#DOCS_TOPICS_GATEWAY/message-delete) Gateway event.",
+            "return_type": null
         },
         {
             "name": "Bulk Delete Messages",
@@ -158,7 +173,8 @@
             "parameters": {
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
             },
-            "description": "Delete multiple messages in a single request. This endpoint can only be used on guild channels and requires the `MANAGE_MESSAGES` permission. Returns a 204 empty response on success. Fires a [Message Delete Bulk](#DOCS_TOPICS_GATEWAY/message-delete-bulk) Gateway event.\nAny message IDs given that do not exist or are invalid will count towards the minimum and maximum message count (currently 2 and 100 respectively)."
+            "description": "Delete multiple messages in a single request. This endpoint can only be used on guild channels and requires the `MANAGE_MESSAGES` permission. Returns a 204 empty response on success. Fires a [Message Delete Bulk](#DOCS_TOPICS_GATEWAY/message-delete-bulk) Gateway event.\nAny message IDs given that do not exist or are invalid will count towards the minimum and maximum message count (currently 2 and 100 respectively).",
+            "return_type": null
         },
         {
             "name": "Edit Channel Permissions",
@@ -168,7 +184,8 @@
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
                 "overwrite.id": "DOCS_RESOURCES_CHANNEL/overwrite-object"
             },
-            "description": "Edit the channel permission overwrites for a user or role in a channel. Only usable for guild channels. Requires the `MANAGE_ROLES` permission. Only permissions your bot has in the guild or channel can be allowed/denied (unless your bot has a `MANAGE_ROLES` overwrite in the channel). Returns a 204 empty response on success. For more information about permissions, see [permissions](#DOCS_TOPICS_PERMISSIONS/permissions)."
+            "description": "Edit the channel permission overwrites for a user or role in a channel. Only usable for guild channels. Requires the `MANAGE_ROLES` permission. Only permissions your bot has in the guild or channel can be allowed/denied (unless your bot has a `MANAGE_ROLES` overwrite in the channel). Returns a 204 empty response on success. For more information about permissions, see [permissions](#DOCS_TOPICS_PERMISSIONS/permissions).",
+            "return_type": null
         },
         {
             "name": "Get Channel Invites",
@@ -177,7 +194,8 @@
             "parameters": {
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
             },
-            "description": "Returns a list of [invite](#DOCS_RESOURCES_INVITE/invite-object) objects (with [invite metadata](#DOCS_RESOURCES_INVITE/invite-metadata-object)) for the channel. Only usable for guild channels. Requires the `MANAGE_CHANNELS` permission."
+            "description": "Returns a list of [invite](#DOCS_RESOURCES_INVITE/invite-object) objects (with [invite metadata](#DOCS_RESOURCES_INVITE/invite-metadata-object)) for the channel. Only usable for guild channels. Requires the `MANAGE_CHANNELS` permission.",
+            "return_type": "list of [invite](#DOCS_RESOURCES_INVITE/invite-object)"
         },
         {
             "name": "Create Channel Invite",
@@ -186,7 +204,8 @@
             "parameters": {
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
             },
-            "description": "Create a new [invite](#DOCS_RESOURCES_INVITE/invite-object) object for the channel. Only usable for guild channels. Requires the `CREATE_INSTANT_INVITE` permission. All JSON parameters for this route are optional, however the request body is not. If you are not sending any fields, you still have to send an empty JSON object (`{}`). Returns an [invite](#DOCS_RESOURCES_INVITE/invite-object) object. Fires an [Invite Create](#DOCS_TOPICS_GATEWAY/invite-create) Gateway event."
+            "description": "Create a new [invite](#DOCS_RESOURCES_INVITE/invite-object) object for the channel. Only usable for guild channels. Requires the `CREATE_INSTANT_INVITE` permission. All JSON parameters for this route are optional, however the request body is not. If you are not sending any fields, you still have to send an empty JSON object (`{}`). Returns an [invite](#DOCS_RESOURCES_INVITE/invite-object) object. Fires an [Invite Create](#DOCS_TOPICS_GATEWAY/invite-create) Gateway event.",
+            "return_type": "[invite](#DOCS_RESOURCES_INVITE/invite-object)"
         },
         {
             "name": "Delete Channel Permission",
@@ -196,7 +215,8 @@
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
                 "overwrite.id": "DOCS_RESOURCES_CHANNEL/overwrite-object"
             },
-            "description": "Delete a channel permission overwrite for a user or role in a channel. Only usable for guild channels. Requires the `MANAGE_ROLES` permission. Returns a 204 empty response on success. For more information about permissions, see [permissions](#DOCS_TOPICS_PERMISSIONS/permissions)"
+            "description": "Delete a channel permission overwrite for a user or role in a channel. Only usable for guild channels. Requires the `MANAGE_ROLES` permission. Returns a 204 empty response on success. For more information about permissions, see [permissions](#DOCS_TOPICS_PERMISSIONS/permissions)",
+            "return_type": null
         },
         {
             "name": "Follow News Channel",
@@ -205,7 +225,8 @@
             "parameters": {
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
             },
-            "description": "Follow a News Channel to send messages to a target channel. Requires the `MANAGE_WEBHOOKS` permission in the target channel. Returns a [followed channel](#DOCS_RESOURCES_CHANNEL/followed-channel-object) object."
+            "description": "Follow a News Channel to send messages to a target channel. Requires the `MANAGE_WEBHOOKS` permission in the target channel. Returns a [followed channel](#DOCS_RESOURCES_CHANNEL/followed-channel-object) object.",
+            "return_type": "[followed channel](#DOCS_RESOURCES_CHANNEL/followed-channel-object)"
         },
         {
             "name": "Trigger Typing Indicator",
@@ -214,7 +235,8 @@
             "parameters": {
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
             },
-            "description": "Post a typing indicator for the specified channel. Generally bots should **not** implement this route. However, if a bot is responding to a command and expects the computation to take a few seconds, this endpoint may be called to let the user know that the bot is processing their message. Returns a 204 empty response on success. Fires a [Typing Start](#DOCS_TOPICS_GATEWAY/typing-start) Gateway event."
+            "description": "Post a typing indicator for the specified channel. Generally bots should **not** implement this route. However, if a bot is responding to a command and expects the computation to take a few seconds, this endpoint may be called to let the user know that the bot is processing their message. Returns a 204 empty response on success. Fires a [Typing Start](#DOCS_TOPICS_GATEWAY/typing-start) Gateway event.",
+            "return_type": null
         },
         {
             "name": "Get Pinned Messages",
@@ -223,7 +245,8 @@
             "parameters": {
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
             },
-            "description": "Returns all pinned messages in the channel as an array of [message](#DOCS_RESOURCES_CHANNEL/message-object) objects."
+            "description": "Returns all pinned messages in the channel as an array of [message](#DOCS_RESOURCES_CHANNEL/message-object) objects.",
+            "return_type": "list of [message](#DOCS_RESOURCES_CHANNEL/message-object)"
         },
         {
             "name": "Pin Message",
@@ -233,7 +256,8 @@
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
                 "message.id": "DOCS_RESOURCES_CHANNEL/message-object"
             },
-            "description": "Pin a message in a channel. Requires the `MANAGE_MESSAGES` permission. Returns a 204 empty response on success."
+            "description": "Pin a message in a channel. Requires the `MANAGE_MESSAGES` permission. Returns a 204 empty response on success.",
+            "return_type": null
         },
         {
             "name": "Unpin Message",
@@ -243,7 +267,8 @@
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
                 "message.id": "DOCS_RESOURCES_CHANNEL/message-object"
             },
-            "description": "Unpin a message in a channel. Requires the `MANAGE_MESSAGES` permission. Returns a 204 empty response on success."
+            "description": "Unpin a message in a channel. Requires the `MANAGE_MESSAGES` permission. Returns a 204 empty response on success.",
+            "return_type": null
         },
         {
             "name": "Group DM Add Recipient",
@@ -253,7 +278,8 @@
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
                 "user.id": "DOCS_RESOURCES_USER/user-object"
             },
-            "description": "Adds a recipient to a Group DM using their access token."
+            "description": "Adds a recipient to a Group DM using their access token.",
+            "return_type": null
         },
         {
             "name": "Group DM Remove Recipient",
@@ -263,7 +289,8 @@
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
                 "user.id": "DOCS_RESOURCES_USER/user-object"
             },
-            "description": "Removes a recipient from a Group DM."
+            "description": "Removes a recipient from a Group DM.",
+            "return_type": null
         },
         {
             "name": "Start Thread with Message",
@@ -273,7 +300,8 @@
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
                 "message.id": "DOCS_RESOURCES_CHANNEL/message-object"
             },
-            "description": "Creates a new thread from an existing message. Returns a [channel](#DOCS_RESOURCES_CHANNEL/channel-object) on success, and a 400 BAD REQUEST on invalid parameters. Fires a [Thread Create](#DOCS_TOPICS_GATEWAY/thread-create) Gateway event.\nWhen called on a `GUILD_TEXT` channel, creates a `GUILD_PUBLIC_THREAD`. When called on a `GUILD_NEWS` channel, creates a `GUILD_NEWS_THREAD`. The id of the created thread will be the same as the id of the message, and as such a message can only have a single thread created from it."
+            "description": "Creates a new thread from an existing message. Returns a [channel](#DOCS_RESOURCES_CHANNEL/channel-object) on success, and a 400 BAD REQUEST on invalid parameters. Fires a [Thread Create](#DOCS_TOPICS_GATEWAY/thread-create) Gateway event.\nWhen called on a `GUILD_TEXT` channel, creates a `GUILD_PUBLIC_THREAD`. When called on a `GUILD_NEWS` channel, creates a `GUILD_NEWS_THREAD`. The id of the created thread will be the same as the id of the message, and as such a message can only have a single thread created from it.",
+            "return_type": "[channel](#DOCS_RESOURCES_CHANNEL/channel-object)"
         },
         {
             "name": "Start Thread without Message",
@@ -282,7 +310,8 @@
             "parameters": {
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
             },
-            "description": "Creates a new thread that is not connected to an existing message. The created thread defaults to a `GUILD_PRIVATE_THREAD`\\*. Returns a [channel](#DOCS_RESOURCES_CHANNEL/channel-object) on success, and a 400 BAD REQUEST on invalid parameters. Fires a [Thread Create](#DOCS_TOPICS_GATEWAY/thread-create) Gateway event."
+            "description": "Creates a new thread that is not connected to an existing message. The created thread defaults to a `GUILD_PRIVATE_THREAD`\\*. Returns a [channel](#DOCS_RESOURCES_CHANNEL/channel-object) on success, and a 400 BAD REQUEST on invalid parameters. Fires a [Thread Create](#DOCS_TOPICS_GATEWAY/thread-create) Gateway event.",
+            "return_type": "[channel](#DOCS_RESOURCES_CHANNEL/channel-object)"
         },
         {
             "name": "Join Thread",
@@ -291,7 +320,8 @@
             "parameters": {
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
             },
-            "description": "Adds the current user to a thread. Also requires the thread is not archived. Returns a 204 empty response on success. Fires a [Thread Members Update](#DOCS_TOPICS_GATEWAY/thread-members-update) Gateway event."
+            "description": "Adds the current user to a thread. Also requires the thread is not archived. Returns a 204 empty response on success. Fires a [Thread Members Update](#DOCS_TOPICS_GATEWAY/thread-members-update) Gateway event.",
+            "return_type": null
         },
         {
             "name": "Add Thread Member",
@@ -301,7 +331,8 @@
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
                 "user.id": "DOCS_RESOURCES_USER/user-object"
             },
-            "description": "Adds another member to a thread. Requires the ability to send messages in the thread. Also requires the thread is not archived. Returns a 204 empty response if the member is successfully added or was already a member of the thread. Fires a [Thread Members Update](#DOCS_TOPICS_GATEWAY/thread-members-update) Gateway event."
+            "description": "Adds another member to a thread. Requires the ability to send messages in the thread. Also requires the thread is not archived. Returns a 204 empty response if the member is successfully added or was already a member of the thread. Fires a [Thread Members Update](#DOCS_TOPICS_GATEWAY/thread-members-update) Gateway event.",
+            "return_type": null
         },
         {
             "name": "Leave Thread",
@@ -310,7 +341,8 @@
             "parameters": {
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
             },
-            "description": "Removes the current user from a thread. Also requires the thread is not archived. Returns a 204 empty response on success. Fires a [Thread Members Update](#DOCS_TOPICS_GATEWAY/thread-members-update) Gateway event."
+            "description": "Removes the current user from a thread. Also requires the thread is not archived. Returns a 204 empty response on success. Fires a [Thread Members Update](#DOCS_TOPICS_GATEWAY/thread-members-update) Gateway event.",
+            "return_type": null
         },
         {
             "name": "Remove Thread Member",
@@ -320,7 +352,8 @@
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
                 "user.id": "DOCS_RESOURCES_USER/user-object"
             },
-            "description": "Removes another member from a thread. Requires the `MANAGE_THREADS` permission, or the creator of the thread if it is a `GUILD_PRIVATE_THREAD`. Also requires the thread is not archived. Returns a 204 empty response on success. Fires a [Thread Members Update](#DOCS_TOPICS_GATEWAY/thread-members-update) Gateway event."
+            "description": "Removes another member from a thread. Requires the `MANAGE_THREADS` permission, or the creator of the thread if it is a `GUILD_PRIVATE_THREAD`. Also requires the thread is not archived. Returns a 204 empty response on success. Fires a [Thread Members Update](#DOCS_TOPICS_GATEWAY/thread-members-update) Gateway event.",
+            "return_type": null
         },
         {
             "name": "Get Thread Member",
@@ -330,7 +363,8 @@
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object",
                 "user.id": "DOCS_RESOURCES_USER/user-object"
             },
-            "description": "Returns a [thread member](#DOCS_RESOURCES_CHANNEL/thread-member-object) object for the specified user if they are a member of the thread, returns a 404 response otherwise."
+            "description": "Returns a [thread member](#DOCS_RESOURCES_CHANNEL/thread-member-object) object for the specified user if they are a member of the thread, returns a 404 response otherwise.",
+            "return_type": "[thread member](#DOCS_RESOURCES_CHANNEL/thread-member-object)"
         },
         {
             "name": "List Thread Members",
@@ -339,7 +373,8 @@
             "parameters": {
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
             },
-            "description": "Returns array of [thread members](#DOCS_RESOURCES_CHANNEL/thread-member-object) objects that are members of the thread."
+            "description": "Returns array of [thread members](#DOCS_RESOURCES_CHANNEL/thread-member-object) objects that are members of the thread.",
+            "return_type": "list of [thread members](#DOCS_RESOURCES_CHANNEL/thread-member-object)"
         },
         {
             "name": "List Active Threads",
@@ -348,7 +383,8 @@
             "parameters": {
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
             },
-            "description": "Returns all active threads in the channel, including public and private threads. Threads are ordered by their `id`, in descending order."
+            "description": "Returns all active threads in the channel, including public and private threads. Threads are ordered by their `id`, in descending order.",
+            "return_type": null
         },
         {
             "name": "List Public Archived Threads",
@@ -357,7 +393,8 @@
             "parameters": {
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
             },
-            "description": "Returns archived threads in the channel that are public. When called on a `GUILD_TEXT` channel, returns threads of [type](#DOCS_RESOURCES_CHANNEL/channel-object-channel-types) `GUILD_PUBLIC_THREAD`. When called on a `GUILD_NEWS` channel returns threads of [type](#DOCS_RESOURCES_CHANNEL/channel-object-channel-types) `GUILD_NEWS_THREAD`. Threads are ordered by `archive_timestamp`, in descending order. Requires the `READ_MESSAGE_HISTORY` permission."
+            "description": "Returns archived threads in the channel that are public. When called on a `GUILD_TEXT` channel, returns threads of [type](#DOCS_RESOURCES_CHANNEL/channel-object-channel-types) `GUILD_PUBLIC_THREAD`. When called on a `GUILD_NEWS` channel returns threads of [type](#DOCS_RESOURCES_CHANNEL/channel-object-channel-types) `GUILD_NEWS_THREAD`. Threads are ordered by `archive_timestamp`, in descending order. Requires the `READ_MESSAGE_HISTORY` permission.",
+            "return_type": "[type](#DOCS_RESOURCES_CHANNEL/channel-object-channel-types)"
         },
         {
             "name": "List Private Archived Threads",
@@ -366,7 +403,8 @@
             "parameters": {
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
             },
-            "description": "Returns archived threads in the channel that are of [type](#DOCS_RESOURCES_CHANNEL/channel-object-channel-types) `GUILD_PRIVATE_THREAD`. Threads are ordered by `archive_timestamp`, in descending order. Requires both the `READ_MESSAGE_HISTORY` and `MANAGE_THREADS` permissions."
+            "description": "Returns archived threads in the channel that are of [type](#DOCS_RESOURCES_CHANNEL/channel-object-channel-types) `GUILD_PRIVATE_THREAD`. Threads are ordered by `archive_timestamp`, in descending order. Requires both the `READ_MESSAGE_HISTORY` and `MANAGE_THREADS` permissions.",
+            "return_type": "[type](#DOCS_RESOURCES_CHANNEL/channel-object-channel-types)"
         },
         {
             "name": "List Joined Private Archived Threads",
@@ -375,7 +413,8 @@
             "parameters": {
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
             },
-            "description": "Returns archived threads in the channel that are of [type](#DOCS_RESOURCES_CHANNEL/channel-object-channel-types) `GUILD_PRIVATE_THREAD`, and the user has joined. Threads are ordered by their `id`, in descending order. Requires the `READ_MESSAGE_HISTORY` permission."
+            "description": "Returns archived threads in the channel that are of [type](#DOCS_RESOURCES_CHANNEL/channel-object-channel-types) `GUILD_PRIVATE_THREAD`, and the user has joined. Threads are ordered by their `id`, in descending order. Requires the `READ_MESSAGE_HISTORY` permission.",
+            "return_type": "[type](#DOCS_RESOURCES_CHANNEL/channel-object-channel-types)"
         }
     ]
 }

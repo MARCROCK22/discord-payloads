@@ -5,7 +5,8 @@
             "method": "POST",
             "route": "/stage-instances",
             "parameters": {},
-            "description": "Creates a new Stage instance associated to a Stage channel.\nRequires the user to be a moderator of the Stage channel."
+            "description": "Creates a new Stage instance associated to a Stage channel.\nRequires the user to be a moderator of the Stage channel.",
+            "return_type": null
         },
         {
             "name": "Get Stage Instance",
@@ -14,7 +15,8 @@
             "parameters": {
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
             },
-            "description": "Gets the stage instance associated with the Stage channel, if it exists."
+            "description": "Gets the stage instance associated with the Stage channel, if it exists.",
+            "return_type": null
         },
         {
             "name": "Modify Stage Instance",
@@ -23,7 +25,8 @@
             "parameters": {
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
             },
-            "description": "Updates fields of an existing Stage instance.\nRequires the user to be a moderator of the Stage channel."
+            "description": "Updates fields of an existing Stage instance.\nRequires the user to be a moderator of the Stage channel.",
+            "return_type": null
         },
         {
             "name": "Delete Stage Instance",
@@ -32,7 +35,8 @@
             "parameters": {
                 "channel.id": "DOCS_RESOURCES_CHANNEL/channel-object"
             },
-            "description": "Deletes the Stage instance.\nRequires the user to be a moderator of the Stage channel."
+            "description": "Deletes the Stage instance.\nRequires the user to be a moderator of the Stage channel.",
+            "return_type": null
         }
     ]
 }

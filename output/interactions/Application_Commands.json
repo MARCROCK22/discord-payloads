@@ -7,7 +7,8 @@
             "parameters": {
                 "application.id": "DOCS_RESOURCES_APPLICATION/application-object"
             },
-            "description": "Fetch all of the global commands for your application. Returns an array of [application command](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object) objects."
+            "description": "Fetch all of the global commands for your application. Returns an array of [application command](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object) objects.",
+            "return_type": "list of [application command](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object)"
         },
         {
             "name": "Create Global Application Command",
@@ -16,7 +17,8 @@
             "parameters": {
                 "application.id": "DOCS_RESOURCES_APPLICATION/application-object"
             },
-            "description": "Create a new global command. New global commands will be available in all guilds after 1 hour. Returns `201` and an [application command](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object) object."
+            "description": "Create a new global command. New global commands will be available in all guilds after 1 hour. Returns `201` and an [application command](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object) object.",
+            "return_type": "[application command](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object)"
         },
         {
             "name": "Get Global Application Command",
@@ -26,7 +28,8 @@
                 "application.id": "DOCS_RESOURCES_APPLICATION/application-object",
                 "command.id": "DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object"
             },
-            "description": "Fetch a global command for your application. Returns an [application command](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object) object."
+            "description": "Fetch a global command for your application. Returns an [application command](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object) object.",
+            "return_type": "[application command](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object)"
         },
         {
             "name": "Edit Global Application Command",
@@ -36,7 +39,8 @@
                 "application.id": "DOCS_RESOURCES_APPLICATION/application-object",
                 "command.id": "DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object"
             },
-            "description": "Edit a global command. Updates will be available in all guilds after 1 hour. Returns `200` and an [application command](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object) object."
+            "description": "Edit a global command. Updates will be available in all guilds after 1 hour. Returns `200` and an [application command](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object) object.",
+            "return_type": "[application command](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object)"
         },
         {
             "name": "Delete Global Application Command",
@@ -46,7 +50,8 @@
                 "application.id": "DOCS_RESOURCES_APPLICATION/application-object",
                 "command.id": "DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object"
             },
-            "description": "Deletes a global command. Returns `204 No Content` on success."
+            "description": "Deletes a global command. Returns `204 No Content` on success.",
+            "return_type": null
         },
         {
             "name": "Bulk Overwrite Global Application Commands",
@@ -55,7 +60,8 @@
             "parameters": {
                 "application.id": "DOCS_RESOURCES_APPLICATION/application-object"
             },
-            "description": "Takes a list of application commands, overwriting the existing global command list for this application. Updates will be available in all guilds after 1 hour. Returns `200` and a list of [application command](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object) objects. Commands that do not already exist will count toward daily application command create limits."
+            "description": "Takes a list of application commands, overwriting the existing global command list for this application. Updates will be available in all guilds after 1 hour. Returns `200` and a list of [application command](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object) objects. Commands that do not already exist will count toward daily application command create limits.",
+            "return_type": "list of [application command](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object)"
         },
         {
             "name": "Get Guild Application Commands",
@@ -65,7 +71,8 @@
                 "application.id": "DOCS_RESOURCES_APPLICATION/application-object",
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
             },
-            "description": "Fetch all of the guild commands for your application for a specific guild. Returns an array of [application command](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object) objects."
+            "description": "Fetch all of the guild commands for your application for a specific guild. Returns an array of [application command](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object) objects.",
+            "return_type": "list of [application command](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object)"
         },
         {
             "name": "Create Guild Application Command",
@@ -75,7 +82,8 @@
                 "application.id": "DOCS_RESOURCES_APPLICATION/application-object",
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
             },
-            "description": "Create a new guild command. New guild commands will be available in the guild immediately. Returns `201` and an [application command](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object) object. If the command did not already exist, it will count toward daily application command create limits."
+            "description": "Create a new guild command. New guild commands will be available in the guild immediately. Returns `201` and an [application command](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object) object. If the command did not already exist, it will count toward daily application command create limits.",
+            "return_type": "[application command](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object)"
         },
         {
             "name": "Get Guild Application Command",
@@ -86,7 +94,8 @@
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
                 "command.id": "DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object"
             },
-            "description": "Fetch a guild command for your application. Returns an [application command](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object) object."
+            "description": "Fetch a guild command for your application. Returns an [application command](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object) object.",
+            "return_type": "[application command](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object)"
         },
         {
             "name": "Edit Guild Application Command",
@@ -97,7 +106,8 @@
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
                 "command.id": "DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object"
             },
-            "description": "Edit a guild command. Updates for guild commands will be available immediately. Returns `200` and an [application command](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object) object."
+            "description": "Edit a guild command. Updates for guild commands will be available immediately. Returns `200` and an [application command](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object) object.",
+            "return_type": "[application command](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object)"
         },
         {
             "name": "Delete Guild Application Command",
@@ -108,7 +118,8 @@
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
                 "command.id": "DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object"
             },
-            "description": "Delete a guild command. Returns `204 No Content` on success."
+            "description": "Delete a guild command. Returns `204 No Content` on success.",
+            "return_type": null
         },
         {
             "name": "Bulk Overwrite Guild Application Commands",
@@ -118,7 +129,8 @@
                 "application.id": "DOCS_RESOURCES_APPLICATION/application-object",
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
             },
-            "description": "Takes a list of application commands, overwriting the existing command list for this application for the targeted guild. Returns `200` and a list of [application command](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object) objects."
+            "description": "Takes a list of application commands, overwriting the existing command list for this application for the targeted guild. Returns `200` and a list of [application command](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object) objects.",
+            "return_type": "list of [application command](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object)"
         },
         {
             "name": "Get Guild Application Command Permissions",
@@ -128,7 +140,8 @@
                 "application.id": "DOCS_RESOURCES_APPLICATION/application-object",
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
             },
-            "description": "Fetches command permissions for all commands for your application in a guild. Returns an array of [guild application command permissions](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-permissions-object-guild-application-command-permissions-structure) objects."
+            "description": "Fetches command permissions for all commands for your application in a guild. Returns an array of [guild application command permissions](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-permissions-object-guild-application-command-permissions-structure) objects.",
+            "return_type": "list of [guild application command permissions](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-permissions-object-guild-application-command-permissions-structure)"
         },
         {
             "name": "Get Application Command Permissions",
@@ -139,7 +152,8 @@
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
                 "command.id": "DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object"
             },
-            "description": "Fetches command permissions for a specific command for your application in a guild. Returns a [guild application command permissions](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-permissions-object-guild-application-command-permissions-structure) object."
+            "description": "Fetches command permissions for a specific command for your application in a guild. Returns a [guild application command permissions](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-permissions-object-guild-application-command-permissions-structure) object.",
+            "return_type": "[guild application command permissions](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-permissions-object-guild-application-command-permissions-structure)"
         },
         {
             "name": "Edit Application Command Permissions",
@@ -150,7 +164,8 @@
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object",
                 "command.id": "DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-object"
             },
-            "description": "Edits command permissions for a specific command for your application in a guild.\nYou can only add up to 10 permission overwrites for a command.\nReturns a [GuildApplicationCommandPermissions](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-permissions-object-guild-application-command-permissions-structure) object."
+            "description": "Edits command permissions for a specific command for your application in a guild.\nYou can only add up to 10 permission overwrites for a command.\nReturns a [GuildApplicationCommandPermissions](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-permissions-object-guild-application-command-permissions-structure) object.",
+            "return_type": "[GuildApplicationCommandPermissions](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-permissions-object-guild-application-command-permissions-structure)"
         },
         {
             "name": "Batch Edit Application Command Permissions",
@@ -160,7 +175,8 @@
                 "application.id": "DOCS_RESOURCES_APPLICATION/application-object",
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
             },
-            "description": "Batch edits permissions for all commands in a guild. Takes an array of partial [guild application command permissions](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-permissions-object-guild-application-command-permissions-structure) objects including `id` and `permissions`.\nYou can only add up to 10 permission overwrites for a command.\nReturns an array of [GuildApplicationCommandPermissions](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-permissions-object-guild-application-command-permissions-structure) objects."
+            "description": "Batch edits permissions for all commands in a guild. Takes an array of partial [guild application command permissions](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-permissions-object-guild-application-command-permissions-structure) objects including `id` and `permissions`.\nYou can only add up to 10 permission overwrites for a command.\nReturns an array of [GuildApplicationCommandPermissions](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-permissions-object-guild-application-command-permissions-structure) objects.",
+            "return_type": "list of [GuildApplicationCommandPermissions](#DOCS_INTERACTIONS_APPLICATION_COMMANDS/application-command-permissions-object-guild-application-command-permissions-structure)"
         }
     ]
 }

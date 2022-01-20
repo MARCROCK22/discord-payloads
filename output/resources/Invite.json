@@ -7,7 +7,8 @@
             "parameters": {
                 "invite.code": "DOCS_RESOURCES_INVITE/invite-object"
             },
-            "description": "Returns an [invite](#DOCS_RESOURCES_INVITE/invite-object) object for the given code."
+            "description": "Returns an [invite](#DOCS_RESOURCES_INVITE/invite-object) object for the given code.",
+            "return_type": "[invite](#DOCS_RESOURCES_INVITE/invite-object)"
         },
         {
             "name": "Delete Invite",
@@ -16,7 +17,8 @@
             "parameters": {
                 "invite.code": "DOCS_RESOURCES_INVITE/invite-object"
             },
-            "description": "Delete an invite. Requires the `MANAGE_CHANNELS` permission on the channel this invite belongs to, or `MANAGE_GUILD` to remove any invite across the guild. Returns an [invite](#DOCS_RESOURCES_INVITE/invite-object) object on success. Fires a [Invite Delete](#DOCS_TOPICS_GATEWAY/invite-delete) Gateway event."
+            "description": "Delete an invite. Requires the `MANAGE_CHANNELS` permission on the channel this invite belongs to, or `MANAGE_GUILD` to remove any invite across the guild. Returns an [invite](#DOCS_RESOURCES_INVITE/invite-object) object on success. Fires a [Invite Delete](#DOCS_TOPICS_GATEWAY/invite-delete) Gateway event.",
+            "return_type": "[invite](#DOCS_RESOURCES_INVITE/invite-object)"
         }
     ]
 }

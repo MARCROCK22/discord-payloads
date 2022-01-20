@@ -5,7 +5,8 @@
             "method": "GET",
             "route": "/users/@me",
             "parameters": {},
-            "description": "Returns the [user](#DOCS_RESOURCES_USER/user-object) object of the requester's account. For OAuth2, this requires the `identify` scope, which will return the object _without_ an email, and optionally the `email` scope, which returns the object _with_ an email."
+            "description": "Returns the [user](#DOCS_RESOURCES_USER/user-object) object of the requester's account. For OAuth2, this requires the `identify` scope, which will return the object _without_ an email, and optionally the `email` scope, which returns the object _with_ an email.",
+            "return_type": "[user](#DOCS_RESOURCES_USER/user-object)"
         },
         {
             "name": "Get User",
@@ -14,21 +15,24 @@
             "parameters": {
                 "user.id": "DOCS_RESOURCES_USER/user-object"
             },
-            "description": "Returns a [user](#DOCS_RESOURCES_USER/user-object) object for a given user ID."
+            "description": "Returns a [user](#DOCS_RESOURCES_USER/user-object) object for a given user ID.",
+            "return_type": "[user](#DOCS_RESOURCES_USER/user-object)"
         },
         {
             "name": "Modify Current User",
             "method": "PATCH",
             "route": "/users/@me",
             "parameters": {},
-            "description": "Modify the requester's user account settings. Returns a [user](#DOCS_RESOURCES_USER/user-object) object on success."
+            "description": "Modify the requester's user account settings. Returns a [user](#DOCS_RESOURCES_USER/user-object) object on success.",
+            "return_type": "[user](#DOCS_RESOURCES_USER/user-object)"
         },
         {
             "name": "Get Current User Guilds",
             "method": "GET",
             "route": "/users/@me/guilds",
             "parameters": {},
-            "description": "Returns a list of partial [guild](#DOCS_RESOURCES_GUILD/guild-object) objects the current user is a member of. Requires the `guilds` OAuth2 scope."
+            "description": "Returns a list of partial [guild](#DOCS_RESOURCES_GUILD/guild-object) objects the current user is a member of. Requires the `guilds` OAuth2 scope.",
+            "return_type": "list of [guild](#DOCS_RESOURCES_GUILD/guild-object)"
         },
         {
             "name": "Get Current User Guild Member",
@@ -37,7 +41,8 @@
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
             },
-            "description": "Returns a [guild member](#DOCS_RESOURCES_GUILD/guild-member-object) object for the current user. Requires the `guilds.members.read` OAuth2 scope."
+            "description": "Returns a [guild member](#DOCS_RESOURCES_GUILD/guild-member-object) object for the current user. Requires the `guilds.members.read` OAuth2 scope.",
+            "return_type": "[guild member](#DOCS_RESOURCES_GUILD/guild-member-object)"
         },
         {
             "name": "Leave Guild",
@@ -46,28 +51,32 @@
             "parameters": {
                 "guild.id": "DOCS_RESOURCES_GUILD/guild-object"
             },
-            "description": "Leave a guild. Returns a 204 empty response on success."
+            "description": "Leave a guild. Returns a 204 empty response on success.",
+            "return_type": null
         },
         {
             "name": "Create DM",
             "method": "POST",
             "route": "/users/@me/channels",
             "parameters": {},
-            "description": "Create a new DM channel with a user. Returns a [DM channel](#DOCS_RESOURCES_CHANNEL/channel-object) object."
+            "description": "Create a new DM channel with a user. Returns a [DM channel](#DOCS_RESOURCES_CHANNEL/channel-object) object.",
+            "return_type": "[DM channel](#DOCS_RESOURCES_CHANNEL/channel-object)"
         },
         {
             "name": "Create Group DM",
             "method": "POST",
             "route": "/users/@me/channels",
             "parameters": {},
-            "description": "Create a new group DM channel with multiple users. Returns a [DM channel](#DOCS_RESOURCES_CHANNEL/channel-object) object. This endpoint was intended to be used with the now-deprecated GameBridge SDK. DMs created with this endpoint will not be shown in the Discord client"
+            "description": "Create a new group DM channel with multiple users. Returns a [DM channel](#DOCS_RESOURCES_CHANNEL/channel-object) object. This endpoint was intended to be used with the now-deprecated GameBridge SDK. DMs created with this endpoint will not be shown in the Discord client",
+            "return_type": "[DM channel](#DOCS_RESOURCES_CHANNEL/channel-object)"
         },
         {
             "name": "Get User Connections",
             "method": "GET",
             "route": "/users/@me/connections",
             "parameters": {},
-            "description": "Returns a list of [connection](#DOCS_RESOURCES_USER/connection-object) objects. Requires the `connections` OAuth2 scope."
+            "description": "Returns a list of [connection](#DOCS_RESOURCES_USER/connection-object) objects. Requires the `connections` OAuth2 scope.",
+            "return_type": "list of [connection](#DOCS_RESOURCES_USER/connection-object)"
         }
     ]
 }
